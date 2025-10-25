@@ -1,0 +1,81 @@
+{
+  "coordinate_system": "bottom-left (0,0), x\u2192, y\u2191",
+  "west_injections": [
+    {
+      "row": 0,
+      "time": 4,
+      "kind": "XVAL",
+      "value": 10.0
+    },
+    {
+      "row": 0,
+      "time": 5,
+      "kind": "VAL",
+      "value": 2.0
+    },
+    {
+      "row": 0,
+      "time": 6,
+      "kind": "XVAL",
+      "value": 30.0
+    },
+    {
+      "row": 0,
+      "time": 7,
+      "kind": "VAL",
+      "value": 3.0
+    },
+    {
+      "row": 1,
+      "time": 3,
+      "kind": "XVAL",
+      "value": 20.0
+    },
+    {
+      "row": 1,
+      "time": 4,
+      "kind": "VAL",
+      "value": -1.0
+    },
+    {
+      "row": 2,
+      "time": 2,
+      "kind": "XVAL",
+      "value": 10.0
+    },
+    {
+      "row": 2,
+      "time": 3,
+      "kind": "VAL",
+      "value": 4.0
+    },
+    {
+      "row": 2,
+      "time": 4,
+      "kind": "XVAL",
+      "value": 40.0
+    },
+    {
+      "row": 2,
+      "time": 5,
+      "kind": "VAL",
+      "value": 5.0
+    },
+    {
+      "row": 3,
+      "time": 1,
+      "kind": "XVAL",
+      "value": 30.0
+    },
+    {
+      "row": 3,
+      "time": 2,
+      "kind": "VAL",
+      "value": 1.5
+    }
+  ],
+  "token_format": "XVAL then VAL for each nonzero on that row (two consecutive cycles)",
+  "notes": [
+    "No memory loads; XVAL is pre-fetched externally and streamed in."
+  ]
+}
