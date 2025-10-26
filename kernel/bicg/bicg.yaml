@@ -27,6 +27,8 @@ array_config:
                   dst_operands:
                     - operand: "EAST"
                       color: "RED"
+                    - operand: "NORTH"
+                      color: "RED"
             - timestep: 3
               operations:
                 - opcode: "GRANT_ONCE"
@@ -49,7 +51,14 @@ array_config:
                       color: "RED"
                     - operand: "$0"
                       color: "RED"
-                    - operand: "$1"
+            - timestep: 5
+              operations:
+                - opcode: "DATA_MOV"
+                  src_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "NORTH"
                       color: "RED"
             - timestep: 6
               operations:
@@ -68,7 +77,7 @@ array_config:
               operations:
                 - opcode: "PHI"
                   src_operands:
-                    - operand: "NORTH"
+                    - operand: "EAST"
                       color: "RED"
                     - operand: "$0"
                       color: "RED"
@@ -83,14 +92,14 @@ array_config:
               operations:
                 - opcode: "PHI"
                   src_operands:
-                    - operand: "$2"
+                    - operand: "$1"
                       color: "RED"
                     - operand: "$0"
                       color: "RED"
                   dst_operands:
                     - operand: "NORTH"
                       color: "RED"
-                    - operand: "$2"
+                    - operand: "$1"
                       color: "RED"
                     - operand: "EAST"
                       color: "RED"
@@ -108,36 +117,16 @@ array_config:
                     - operand: "$0"
                       color: "RED"
                   dst_operands:
-                    - operand: "NORTH"
-                      color: "RED"
-            - timestep: 12
-              operations:
-                - opcode: "DATA_MOV"
-                  src_operands:
-                    - operand: "EAST"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "NORTH"
+                    - operand: "$0"
                       color: "RED"
             - timestep: 13
               operations:
-                - opcode: "GRANT_PREDICATE"
+                - opcode: "LOAD"
                   src_operands:
-                    - operand: "NORTH"
-                      color: "RED"
-                    - operand: "$1"
+                    - operand: "$0"
                       color: "RED"
                   dst_operands:
-                    - operand: "NORTH"
-                      color: "RED"
-            - timestep: 14
-              operations:
-                - opcode: "DATA_MOV"
-                  src_operands:
                     - operand: "EAST"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "NORTH"
                       color: "RED"
             - timestep: 15
               operations:
@@ -146,27 +135,18 @@ array_config:
                     - operand: "SOUTH"
                       color: "RED"
                   dst_operands:
-                    - operand: "$3"
+                    - operand: "$2"
                       color: "RED"
             - timestep: 17
               operations:
                 - opcode: "GRANT_PREDICATE"
                   src_operands:
+                    - operand: "$1"
+                      color: "RED"
                     - operand: "$2"
                       color: "RED"
-                    - operand: "$3"
-                      color: "RED"
                   dst_operands:
-                    - operand: "$2"
-                      color: "RED"
-            - timestep: 19
-              operations:
-                - opcode: "CTRL_MOV"
-                  src_operands:
-                    - operand: "SOUTH"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "$3"
+                    - operand: "$1"
                       color: "RED"
     - column: 1
       row: 0
@@ -200,10 +180,10 @@ array_config:
               operations:
                 - opcode: "DATA_MOV"
                   src_operands:
-                    - operand: "WEST"
+                    - operand: "EAST"
                       color: "RED"
                   dst_operands:
-                    - operand: "EAST"
+                    - operand: "WEST"
                       color: "RED"
             - timestep: 5
               operations:
@@ -227,13 +207,6 @@ array_config:
               operations:
                 - opcode: "DATA_MOV"
                   src_operands:
-                    - operand: "SOUTH"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "$1"
-                      color: "RED"
-                - opcode: "DATA_MOV"
-                  src_operands:
                     - operand: "EAST"
                       color: "RED"
                   dst_operands:
@@ -241,21 +214,12 @@ array_config:
                       color: "RED"
             - timestep: 11
               operations:
-                - opcode: "GEP"
-                  src_operands:
-                    - operand: "$1"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "WEST"
-                      color: "RED"
-                    - operand: "NORTH"
-                      color: "RED"
                 - opcode: "DATA_MOV"
                   src_operands:
-                    - operand: "EAST"
+                    - operand: "WEST"
                       color: "RED"
                   dst_operands:
-                    - operand: "EAST"
+                    - operand: "$1"
                       color: "RED"
             - timestep: 12
               operations:
@@ -268,9 +232,38 @@ array_config:
                   dst_operands:
                     - operand: "NORTH"
                       color: "RED"
-            - timestep: 13
+            - timestep: 14
               operations:
+                - opcode: "STORE"
+                  src_operands:
+                    - operand: "$1"
+                      color: "RED"
                 - opcode: "DATA_MOV"
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  src_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+            - timestep: 18
+              operations:
+                - opcode: "CTRL_MOV"
+                  src_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+            - timestep: 19
+              operations:
+                - opcode: "CTRL_MOV"
                   src_operands:
                     - operand: "EAST"
                       color: "RED"
@@ -294,10 +287,6 @@ array_config:
                       color: "RED"
                     - operand: "NORTH"
                       color: "RED"
-                    - operand: "EAST"
-                      color: "RED"
-                    - operand: "$1"
-                      color: "RED"
             - timestep: 4
               operations:
                 - opcode: "DATA_MOV"
@@ -306,15 +295,6 @@ array_config:
                       color: "RED"
                   dst_operands:
                     - operand: "NORTH"
-                      color: "RED"
-            - timestep: 5
-              operations:
-                - opcode: "DATA_MOV"
-                  src_operands:
-                    - operand: "WEST"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "EAST"
                       color: "RED"
             - timestep: 10
               operations:
@@ -327,38 +307,16 @@ array_config:
                       color: "RED"
                     - operand: "NORTH"
                       color: "RED"
-            - timestep: 12
+            - timestep: 14
               operations:
-                - opcode: "NOT"
-                  src_operands:
-                    - operand: "$1"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "EAST"
-                      color: "RED"
                 - opcode: "DATA_MOV"
                   src_operands:
-                    - operand: "WEST"
+                    - operand: "SOUTH"
                       color: "RED"
                   dst_operands:
-                    - operand: "WEST"
+                    - operand: "$2"
                       color: "RED"
-            - timestep: 13
-              operations:
-                - opcode: "CONSTANT"
-                  src_operands:
-                    - operand: "#0"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "NORTH"
-                      color: "RED"
-    - column: 3
-      row: 0
-      core_id: "3"
-      entries:
-        - entry_id: "entry0"
-          instructions:
-            - timestep: 2
+            - timestep: 15
               operations:
                 - opcode: "DATA_MOV"
                   src_operands:
@@ -367,31 +325,34 @@ array_config:
                   dst_operands:
                     - operand: "$0"
                       color: "RED"
-            - timestep: 3
-              operations:
                 - opcode: "DATA_MOV"
                   src_operands:
-                    - operand: "WEST"
+                    - operand: "SOUTH"
                       color: "RED"
                   dst_operands:
+                    - operand: "$1"
+                      color: "RED"
+            - timestep: 16
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  src_operands:
+                    - operand: "$2"
+                      color: "RED"
                     - operand: "NORTH"
                       color: "RED"
-            - timestep: 13
+                  dst_operands:
+                    - operand: "WEST"
+                      color: "RED"
+            - timestep: 18
               operations:
                 - opcode: "GRANT_PREDICATE"
                   src_operands:
                     - operand: "$0"
                       color: "RED"
-                    - operand: "WEST"
+                    - operand: "$1"
                       color: "RED"
                   dst_operands:
-                    - operand: "$0"
-                      color: "RED"
-            - timestep: 14
-              operations:
-                - opcode: "ICMP"
-                  src_operands:
-                    - operand: "$0"
+                    - operand: "WEST"
                       color: "RED"
     - column: 0
       row: 1
@@ -399,6 +360,15 @@ array_config:
       entries:
         - entry_id: "entry0"
           instructions:
+            - timestep: 3
+              operations:
+                - opcode: "DATA_MOV"
+                  src_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "NORTH"
+                      color: "RED"
             - timestep: 4
               operations:
                 - opcode: "DATA_MOV"
@@ -426,11 +396,20 @@ array_config:
                   dst_operands:
                     - operand: "EAST"
                       color: "RED"
+            - timestep: 6
+              operations:
+                - opcode: "DATA_MOV"
+                  src_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "NORTH"
+                      color: "RED"
             - timestep: 7
               operations:
                 - opcode: "PHI"
                   src_operands:
-                    - operand: "NORTH"
+                    - operand: "EAST"
                       color: "RED"
                     - operand: "SOUTH"
                       color: "RED"
@@ -507,65 +486,40 @@ array_config:
               operations:
                 - opcode: "PHI"
                   src_operands:
-                    - operand: "$3"
+                    - operand: "NORTH"
                       color: "RED"
                     - operand: "$2"
                       color: "RED"
                   dst_operands:
-                    - operand: "$2"
+                    - operand: "NORTH"
                       color: "RED"
+                    - operand: "EAST"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  src_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                  dst_operands:
                     - operand: "$0"
-                      color: "RED"
-                - opcode: "DATA_MOV"
-                  src_operands:
-                    - operand: "NORTH"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "SOUTH"
-                      color: "RED"
-                - opcode: "DATA_MOV"
-                  src_operands:
-                    - operand: "SOUTH"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "NORTH"
-                      color: "RED"
-                - opcode: "DATA_MOV"
-                  src_operands:
-                    - operand: "WEST"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "$1"
                       color: "RED"
             - timestep: 13
               operations:
                 - opcode: "LOAD"
                   src_operands:
-                    - operand: "SOUTH"
+                    - operand: "$0"
                       color: "RED"
                   dst_operands:
                     - operand: "NORTH"
                       color: "RED"
                 - opcode: "DATA_MOV"
                   src_operands:
-                    - operand: "WEST"
+                    - operand: "EAST"
                       color: "RED"
                   dst_operands:
-                    - operand: "$4"
+                    - operand: "EAST"
                       color: "RED"
             - timestep: 14
               operations:
-                - opcode: "PHI"
-                  src_operands:
-                    - operand: "NORTH"
-                      color: "RED"
-                    - operand: "SOUTH"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "NORTH"
-                      color: "RED"
-                    - operand: "EAST"
-                      color: "RED"
                 - opcode: "DATA_MOV"
                   src_operands:
                     - operand: "EAST"
@@ -573,93 +527,30 @@ array_config:
                   dst_operands:
                     - operand: "SOUTH"
                       color: "RED"
-                - opcode: "DATA_MOV"
+                - opcode: "CTRL_MOV"
                   src_operands:
                     - operand: "SOUTH"
                       color: "RED"
                   dst_operands:
-                    - operand: "$3"
-                      color: "RED"
-            - timestep: 15
-              operations:
-                - opcode: "GRANT_PREDICATE"
-                  src_operands:
-                    - operand: "$0"
-                      color: "RED"
                     - operand: "$1"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "NORTH"
-                      color: "RED"
-                - opcode: "DATA_MOV"
-                  src_operands:
-                    - operand: "SOUTH"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "NORTH"
                       color: "RED"
             - timestep: 16
               operations:
-                - opcode: "GRANT_PREDICATE"
-                  src_operands:
-                    - operand: "$2"
-                      color: "RED"
-                    - operand: "$3"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "$3"
-                      color: "RED"
                 - opcode: "CTRL_MOV"
                   src_operands:
                     - operand: "SOUTH"
                       color: "RED"
                   dst_operands:
-                    - operand: "$1"
+                    - operand: "$3"
                       color: "RED"
-            - timestep: 17
+            - timestep: 19
               operations:
-                - opcode: "DATA_MOV"
+                - opcode: "CTRL_MOV"
                   src_operands:
                     - operand: "SOUTH"
                       color: "RED"
                   dst_operands:
-                    - operand: "$0"
-                      color: "RED"
-            - timestep: 18
-              operations:
-                - opcode: "GRANT_PREDICATE"
-                  src_operands:
                     - operand: "$4"
-                      color: "RED"
-                    - operand: "$0"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "EAST"
-                      color: "RED"
-                - opcode: "CTRL_MOV"
-                  src_operands:
-                    - operand: "EAST"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "SOUTH"
-                      color: "RED"
-            - timestep: 20
-              operations:
-                - opcode: "CTRL_MOV"
-                  src_operands:
-                    - operand: "SOUTH"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "$1"
-                      color: "RED"
-            - timestep: 21
-              operations:
-                - opcode: "CTRL_MOV"
-                  src_operands:
-                    - operand: "SOUTH"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "$5"
                       color: "RED"
     - column: 1
       row: 1
@@ -716,7 +607,7 @@ array_config:
               operations:
                 - opcode: "PHI"
                   src_operands:
-                    - operand: "WEST"
+                    - operand: "SOUTH"
                       color: "RED"
                     - operand: "$0"
                       color: "RED"
@@ -728,7 +619,7 @@ array_config:
                     - operand: "WEST"
                       color: "RED"
                   dst_operands:
-                    - operand: "SOUTH"
+                    - operand: "EAST"
                       color: "RED"
             - timestep: 10
               operations:
@@ -767,9 +658,7 @@ array_config:
                       color: "RED"
                     - operand: "EAST"
                       color: "RED"
-                    - operand: "$3"
-                      color: "RED"
-                    - operand: "WEST"
+                    - operand: "$1"
                       color: "RED"
                     - operand: "$0"
                       color: "RED"
@@ -782,6 +671,13 @@ array_config:
                     - operand: "$0"
                       color: "RED"
                   dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
                     - operand: "WEST"
                       color: "RED"
                 - opcode: "DATA_MOV"
@@ -790,13 +686,6 @@ array_config:
                       color: "RED"
                   dst_operands:
                     - operand: "NORTH"
-                      color: "RED"
-                - opcode: "DATA_MOV"
-                  src_operands:
-                    - operand: "WEST"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "EAST"
                       color: "RED"
             - timestep: 13
               operations:
@@ -805,38 +694,52 @@ array_config:
                     - operand: "SOUTH"
                       color: "RED"
                   dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                    - operand: "SOUTH"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  src_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  src_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  src_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                  dst_operands:
                     - operand: "$0"
                       color: "RED"
+            - timestep: 14
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "$1"
+                      color: "RED"
+                  dst_operands:
                     - operand: "$2"
                       color: "RED"
                 - opcode: "DATA_MOV"
                   src_operands:
-                    - operand: "SOUTH"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "NORTH"
-                      color: "RED"
-                - opcode: "DATA_MOV"
-                  src_operands:
-                    - operand: "NORTH"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "WEST"
-                      color: "RED"
-                - opcode: "DATA_MOV"
-                  src_operands:
                     - operand: "WEST"
                       color: "RED"
                   dst_operands:
-                    - operand: "$1"
-                      color: "RED"
-            - timestep: 14
-              operations:
-                - opcode: "ICMP"
-                  src_operands:
                     - operand: "$0"
                       color: "RED"
-                    - operand: "$1"
+                - opcode: "DATA_MOV"
+                  src_operands:
+                    - operand: "WEST"
                       color: "RED"
                   dst_operands:
                     - operand: "NORTH"
@@ -850,37 +753,42 @@ array_config:
                       color: "RED"
             - timestep: 15
               operations:
-                - opcode: "PHI"
+                - opcode: "FMUL_FADD"
                   src_operands:
                     - operand: "NORTH"
                       color: "RED"
-                    - operand: "WEST"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "NORTH"
+                    - operand: "SOUTH"
                       color: "RED"
                     - operand: "$0"
                       color: "RED"
-            - timestep: 16
-              operations:
-                - opcode: "GRANT_PREDICATE"
-                  src_operands:
-                    - operand: "$0"
-                      color: "RED"
-                    - operand: "$3"
-                      color: "RED"
                   dst_operands:
-                    - operand: "NORTH"
+                    - operand: "EAST"
                       color: "RED"
                 - opcode: "DATA_MOV"
                   src_operands:
-                    - operand: "SOUTH"
+                    - operand: "WEST"
                       color: "RED"
                   dst_operands:
                     - operand: "$0"
                       color: "RED"
             - timestep: 17
               operations:
+                - opcode: "CTRL_MOV"
+                  src_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                - opcode: "CTRL_MOV"
+                  src_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$2"
+                      color: "RED"
+            - timestep: 18
+              operations:
                 - opcode: "GRANT_PREDICATE"
                   src_operands:
                     - operand: "$2"
@@ -889,24 +797,6 @@ array_config:
                       color: "RED"
                   dst_operands:
                     - operand: "WEST"
-                      color: "RED"
-            - timestep: 18
-              operations:
-                - opcode: "CTRL_MOV"
-                  src_operands:
-                    - operand: "SOUTH"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "$4"
-                      color: "RED"
-            - timestep: 19
-              operations:
-                - opcode: "CTRL_MOV"
-                  src_operands:
-                    - operand: "EAST"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "$2"
                       color: "RED"
     - column: 2
       row: 1
@@ -934,13 +824,6 @@ array_config:
                       color: "RED"
             - timestep: 5
               operations:
-                - opcode: "DATA_MOV"
-                  src_operands:
-                    - operand: "EAST"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "NORTH"
-                      color: "RED"
                 - opcode: "DATA_MOV"
                   src_operands:
                     - operand: "NORTH"
@@ -974,7 +857,7 @@ array_config:
               operations:
                 - opcode: "PHI"
                   src_operands:
-                    - operand: "NORTH"
+                    - operand: "$4"
                       color: "RED"
                     - operand: "EAST"
                       color: "RED"
@@ -985,14 +868,21 @@ array_config:
               operations:
                 - opcode: "PHI"
                   src_operands:
-                    - operand: "NORTH"
+                    - operand: "WEST"
                       color: "RED"
                     - operand: "$0"
                       color: "RED"
                   dst_operands:
-                    - operand: "NORTH"
+                    - operand: "WEST"
                       color: "RED"
                     - operand: "$0"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "NORTH"
                       color: "RED"
             - timestep: 11
               operations:
@@ -1005,6 +895,8 @@ array_config:
                   dst_operands:
                     - operand: "NORTH"
                       color: "RED"
+                    - operand: "$1"
+                      color: "RED"
                     - operand: "WEST"
                       color: "RED"
             - timestep: 12
@@ -1016,43 +908,69 @@ array_config:
                     - operand: "WEST"
                       color: "RED"
                   dst_operands:
-                    - operand: "WEST"
+                    - operand: "$0"
                       color: "RED"
-                    - operand: "EAST"
+                    - operand: "$2"
                       color: "RED"
             - timestep: 13
               operations:
                 - opcode: "DATA_MOV"
                   src_operands:
-                    - operand: "WEST"
-                      color: "RED"
-                  dst_operands:
                     - operand: "NORTH"
                       color: "RED"
-            - timestep: 14
-              operations:
-                - opcode: "STORE"
-                  src_operands:
-                    - operand: "SOUTH"
+                  dst_operands:
+                    - operand: "WEST"
                       color: "RED"
                 - opcode: "DATA_MOV"
                   src_operands:
-                    - operand: "EAST"
+                    - operand: "WEST"
                       color: "RED"
                   dst_operands:
-                    - operand: "NORTH"
+                    - operand: "SOUTH"
+                      color: "RED"
+            - timestep: 14
+              operations:
+                - opcode: "ICMP"
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                    - operand: "$0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
                       color: "RED"
             - timestep: 15
               operations:
-                - opcode: "CTRL_MOV"
+                - opcode: "NOT"
                   src_operands:
-                    - operand: "SOUTH"
+                    - operand: "$0"
                       color: "RED"
                   dst_operands:
-                    - operand: "$2"
+                    - operand: "SOUTH"
+                      color: "RED"
+                    - operand: "WEST"
+                      color: "RED"
+                    - operand: "$3"
                       color: "RED"
             - timestep: 16
               operations:
+                - opcode: "STORE"
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                    - operand: "$1"
+                      color: "RED"
+            - timestep: 17
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  src_operands:
+                    - operand: "$2"
+                      color: "RED"
+                    - operand: "$3"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$4"
+                      color: "RED"
                 - opcode: "CTRL_MOV"
                   src_operands:
                     - operand: "SOUTH"
@@ -1060,18 +978,39 @@ array_config:
                   dst_operands:
                     - operand: "$3"
                       color: "RED"
-            - timestep: 17
+            - timestep: 18
               operations:
                 - opcode: "CTRL_MOV"
                   src_operands:
-                    - operand: "SOUTH"
+                    - operand: "EAST"
                       color: "RED"
                   dst_operands:
-                    - operand: "$4"
+                    - operand: "$2"
                       color: "RED"
     - column: 3
       row: 1
       core_id: "7"
+      entries:
+        - entry_id: "entry0"
+          instructions:
+            - timestep: 8
+              operations:
+                - opcode: "ZEXT"
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "WEST"
+                      color: "RED"
+            - timestep: 14
+              operations:
+                - opcode: "STORE"
+                  src_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+    - column: 0
+      row: 2
+      core_id: "8"
       entries:
         - entry_id: "entry0"
           instructions:
@@ -1082,32 +1021,17 @@ array_config:
                     - operand: "SOUTH"
                       color: "RED"
                   dst_operands:
-                    - operand: "WEST"
+                    - operand: "NORTH"
                       color: "RED"
-            - timestep: 8
-              operations:
-                - opcode: "ZEXT"
-                  src_operands:
-                    - operand: "WEST"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "WEST"
-                      color: "RED"
-            - timestep: 13
+            - timestep: 7
               operations:
                 - opcode: "DATA_MOV"
                   src_operands:
-                    - operand: "WEST"
+                    - operand: "SOUTH"
                       color: "RED"
                   dst_operands:
-                    - operand: "WEST"
+                    - operand: "NORTH"
                       color: "RED"
-    - column: 0
-      row: 2
-      core_id: "8"
-      entries:
-        - entry_id: "entry0"
-          instructions:
             - timestep: 9
               operations:
                 - opcode: "DATA_MOV"
@@ -1121,10 +1045,10 @@ array_config:
               operations:
                 - opcode: "DATA_MOV"
                   src_operands:
-                    - operand: "SOUTH"
+                    - operand: "NORTH"
                       color: "RED"
                   dst_operands:
-                    - operand: "EAST"
+                    - operand: "$1"
                       color: "RED"
             - timestep: 11
               operations:
@@ -1135,16 +1059,9 @@ array_config:
                     - operand: "$0"
                       color: "RED"
                   dst_operands:
-                    - operand: "EAST"
-                      color: "RED"
-                    - operand: "NORTH"
-                      color: "RED"
-                - opcode: "DATA_MOV"
-                  src_operands:
-                    - operand: "EAST"
-                      color: "RED"
-                  dst_operands:
                     - operand: "SOUTH"
+                      color: "RED"
+                    - operand: "EAST"
                       color: "RED"
             - timestep: 12
               operations:
@@ -1153,94 +1070,38 @@ array_config:
                     - operand: "SOUTH"
                       color: "RED"
                   dst_operands:
-                    - operand: "$2"
+                    - operand: "NORTH"
                       color: "RED"
             - timestep: 13
               operations:
-                - opcode: "LOAD"
+                - opcode: "GRANT_PREDICATE"
                   src_operands:
-                    - operand: "SOUTH"
-                      color: "RED"
-                  dst_operands:
                     - operand: "$1"
                       color: "RED"
-                - opcode: "DATA_MOV"
-                  src_operands:
-                    - operand: "SOUTH"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "$0"
-                      color: "RED"
-                - opcode: "DATA_MOV"
-                  src_operands:
                     - operand: "EAST"
                       color: "RED"
                   dst_operands:
                     - operand: "SOUTH"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  src_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
                       color: "RED"
             - timestep: 14
               operations:
-                - opcode: "FMUL_FADD"
-                  src_operands:
-                    - operand: "$0"
-                      color: "RED"
-                    - operand: "$1"
-                      color: "RED"
-                    - operand: "EAST"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "NORTH"
-                      color: "RED"
                 - opcode: "DATA_MOV"
                   src_operands:
-                    - operand: "NORTH"
+                    - operand: "SOUTH"
                       color: "RED"
                   dst_operands:
-                    - operand: "$0"
+                    - operand: "NORTH"
                       color: "RED"
             - timestep: 15
               operations:
-                - opcode: "FMUL_FADD"
-                  src_operands:
-                    - operand: "$2"
-                      color: "RED"
-                    - operand: "NORTH"
-                      color: "RED"
-                    - operand: "$0"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "EAST"
-                      color: "RED"
-                - opcode: "DATA_MOV"
-                  src_operands:
-                    - operand: "NORTH"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "$0"
-                      color: "RED"
-                - opcode: "DATA_MOV"
-                  src_operands:
-                    - operand: "WEST"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "$1"
-                      color: "RED"
                 - opcode: "CTRL_MOV"
-                  src_operands:
-                    - operand: "EAST"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "SOUTH"
-                      color: "RED"
-            - timestep: 16
-              operations:
-                - opcode: "STORE"
-                  src_operands:
-                    - operand: "$0"
-                      color: "RED"
-                    - operand: "SOUTH"
-                      color: "RED"
-                - opcode: "DATA_MOV"
                   src_operands:
                     - operand: "EAST"
                       color: "RED"
@@ -1248,26 +1109,6 @@ array_config:
                     - operand: "SOUTH"
                       color: "RED"
             - timestep: 18
-              operations:
-                - opcode: "GRANT_PREDICATE"
-                  src_operands:
-                    - operand: "$0"
-                      color: "RED"
-                    - operand: "$1"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "SOUTH"
-                      color: "RED"
-            - timestep: 19
-              operations:
-                - opcode: "CTRL_MOV"
-                  src_operands:
-                    - operand: "EAST"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "SOUTH"
-                      color: "RED"
-            - timestep: 20
               operations:
                 - opcode: "CTRL_MOV"
                   src_operands:
@@ -1282,24 +1123,8 @@ array_config:
       entries:
         - entry_id: "entry0"
           instructions:
-            - timestep: 10
-              operations:
-                - opcode: "DATA_MOV"
-                  src_operands:
-                    - operand: "EAST"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "WEST"
-                      color: "RED"
             - timestep: 11
               operations:
-                - opcode: "DATA_MOV"
-                  src_operands:
-                    - operand: "EAST"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "$2"
-                      color: "RED"
                 - opcode: "DATA_MOV"
                   src_operands:
                     - operand: "NORTH"
@@ -1314,33 +1139,40 @@ array_config:
                     - operand: "SOUTH"
                       color: "RED"
                   dst_operands:
-                    - operand: "$3"
+                    - operand: "WEST"
                       color: "RED"
-                    - operand: "$6"
+                    - operand: "$5"
                       color: "RED"
                     - operand: "SOUTH"
                       color: "RED"
-                    - operand: "EAST"
+                    - operand: "$4"
                       color: "RED"
                     - operand: "$1"
                       color: "RED"
-                    - operand: "$4"
+                    - operand: "$3"
                       color: "RED"
-                    - operand: "WEST"
+                    - operand: "$2"
                       color: "RED"
                 - opcode: "DATA_MOV"
                   src_operands:
-                    - operand: "WEST"
+                    - operand: "EAST"
                       color: "RED"
                   dst_operands:
                     - operand: "NORTH"
                       color: "RED"
                 - opcode: "DATA_MOV"
                   src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  src_operands:
                     - operand: "NORTH"
                       color: "RED"
                   dst_operands:
-                    - operand: "$0"
+                    - operand: "$1"
                       color: "RED"
             - timestep: 13
               operations:
@@ -1353,104 +1185,60 @@ array_config:
                   dst_operands:
                     - operand: "SOUTH"
                       color: "RED"
-                - opcode: "DATA_MOV"
-                  src_operands:
-                    - operand: "EAST"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "WEST"
-                      color: "RED"
-                - opcode: "DATA_MOV"
-                  src_operands:
-                    - operand: "SOUTH"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "NORTH"
-                      color: "RED"
             - timestep: 14
               operations:
                 - opcode: "GRANT_PREDICATE"
                   src_operands:
-                    - operand: "$2"
+                    - operand: "WEST"
                       color: "RED"
-                    - operand: "$3"
+                    - operand: "$2"
                       color: "RED"
                   dst_operands:
                     - operand: "WEST"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  src_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "SOUTH"
                       color: "RED"
             - timestep: 15
               operations:
-                - opcode: "NOT"
+                - opcode: "GRANT_PREDICATE"
                   src_operands:
-                    - operand: "SOUTH"
+                    - operand: "$1"
+                      color: "RED"
+                    - operand: "$4"
                       color: "RED"
                   dst_operands:
-                    - operand: "SOUTH"
-                      color: "RED"
-                    - operand: "$3"
-                      color: "RED"
-                    - operand: "WEST"
-                      color: "RED"
                     - operand: "EAST"
                       color: "RED"
                 - opcode: "DATA_MOV"
                   src_operands:
-                    - operand: "WEST"
+                    - operand: "NORTH"
                       color: "RED"
                   dst_operands:
                     - operand: "$1"
                       color: "RED"
             - timestep: 16
               operations:
-                - opcode: "STORE"
-                  src_operands:
-                    - operand: "WEST"
-                      color: "RED"
-                    - operand: "$0"
-                      color: "RED"
-                - opcode: "DATA_MOV"
-                  src_operands:
-                    - operand: "NORTH"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "$0"
-                      color: "RED"
-            - timestep: 17
-              operations:
-                - opcode: "GRANT_PREDICATE"
-                  src_operands:
-                    - operand: "$0"
-                      color: "RED"
-                    - operand: "$4"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "SOUTH"
-                      color: "RED"
-                - opcode: "DATA_MOV"
-                  src_operands:
-                    - operand: "NORTH"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "$0"
-                      color: "RED"
-            - timestep: 18
-              operations:
-                - opcode: "GRANT_PREDICATE"
-                  src_operands:
-                    - operand: "$1"
-                      color: "RED"
-                    - operand: "$6"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "WEST"
-                      color: "RED"
-            - timestep: 19
-              operations:
                 - opcode: "GRANT_PREDICATE"
                   src_operands:
                     - operand: "$0"
                       color: "RED"
                     - operand: "$3"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+            - timestep: 17
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  src_operands:
+                    - operand: "$1"
+                      color: "RED"
+                    - operand: "$5"
                       color: "RED"
                   dst_operands:
                     - operand: "WEST"
@@ -1470,41 +1258,16 @@ array_config:
                   dst_operands:
                     - operand: "SOUTH"
                       color: "RED"
-            - timestep: 6
-              operations:
-                - opcode: "DATA_MOV"
-                  src_operands:
-                    - operand: "NORTH"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "$0"
-                      color: "RED"
-            - timestep: 9
-              operations:
-                - opcode: "GRANT_PREDICATE"
-                  src_operands:
-                    - operand: "NORTH"
-                      color: "RED"
-                    - operand: "$0"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "WEST"
-                      color: "RED"
             - timestep: 11
               operations:
-                - opcode: "DATA_MOV"
+                - opcode: "GEP"
                   src_operands:
-                    - operand: "NORTH"
+                    - operand: "SOUTH"
                       color: "RED"
                   dst_operands:
-                    - operand: "$2"
-                      color: "RED"
-                - opcode: "DATA_MOV"
-                  src_operands:
                     - operand: "NORTH"
                       color: "RED"
-                  dst_operands:
-                    - operand: "$0"
+                    - operand: "WEST"
                       color: "RED"
             - timestep: 12
               operations:
@@ -1513,66 +1276,24 @@ array_config:
                     - operand: "SOUTH"
                       color: "RED"
                   dst_operands:
-                    - operand: "WEST"
-                      color: "RED"
-                - opcode: "DATA_MOV"
-                  src_operands:
-                    - operand: "EAST"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "$0"
+                    - operand: "SOUTH"
                       color: "RED"
             - timestep: 13
               operations:
-                - opcode: "DATA_MOV"
+                - opcode: "LOAD"
                   src_operands:
-                    - operand: "EAST"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "$1"
-                      color: "RED"
-            - timestep: 14
-              operations:
-                - opcode: "GRANT_PREDICATE"
-                  src_operands:
-                    - operand: "$0"
-                      color: "RED"
-                    - operand: "$1"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "SOUTH"
-                      color: "RED"
-                - opcode: "DATA_MOV"
-                  src_operands:
-                    - operand: "SOUTH"
+                    - operand: "WEST"
                       color: "RED"
                   dst_operands:
                     - operand: "WEST"
                       color: "RED"
-            - timestep: 15
+            - timestep: 14
               operations:
-                - opcode: "GRANT_PREDICATE"
-                  src_operands:
-                    - operand: "$2"
-                      color: "RED"
-                    - operand: "$0"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "SOUTH"
-                      color: "RED"
-                - opcode: "DATA_MOV"
-                  src_operands:
-                    - operand: "NORTH"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "$0"
-                      color: "RED"
+                - opcode: "RETURN"
             - timestep: 16
               operations:
-                - opcode: "GRANT_PREDICATE"
+                - opcode: "CTRL_MOV"
                   src_operands:
-                    - operand: "$0"
-                      color: "RED"
                     - operand: "WEST"
                       color: "RED"
                   dst_operands:
@@ -1591,13 +1312,7 @@ array_config:
                     - operand: "#0"
                       color: "RED"
                   dst_operands:
-                    - operand: "$0"
-                      color: "RED"
-            - timestep: 14
-              operations:
-                - opcode: "STORE"
-                  src_operands:
-                    - operand: "$0"
+                    - operand: "SOUTH"
                       color: "RED"
     - column: 0
       row: 3
@@ -1605,31 +1320,87 @@ array_config:
       entries:
         - entry_id: "entry0"
           instructions:
-            - timestep: 12
+            - timestep: 2
               operations:
-                - opcode: "LOAD"
+                - opcode: "DATA_MOV"
                   src_operands:
-                    - operand: "SOUTH"
+                    - operand: "NORTH"
                       color: "RED"
                   dst_operands:
-                    - operand: "SOUTH"
+                    - operand: "$0"
+                      color: "RED"
+            - timestep: 5
+              operations:
+                - opcode: "DATA_MOV"
+                  src_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$1"
+                      color: "RED"
+            - timestep: 12
+              operations:
+                - opcode: "NOT"
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+            - timestep: 13
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  src_operands:
+                    - operand: "$1"
+                      color: "RED"
+                    - operand: "$0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  src_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$1"
                       color: "RED"
             - timestep: 14
               operations:
                 - opcode: "DATA_MOV"
                   src_operands:
-                    - operand: "EAST"
+                    - operand: "WEST"
                       color: "RED"
                   dst_operands:
-                    - operand: "SOUTH"
+                    - operand: "$1"
                       color: "RED"
             - timestep: 15
               operations:
-                - opcode: "STORE"
+                - opcode: "FMUL_FADD"
                   src_operands:
+                    - operand: "$0"
+                      color: "RED"
                     - operand: "SOUTH"
                       color: "RED"
-                    - operand: "EAST"
+                    - operand: "$1"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+            - timestep: 16
+              operations:
+                - opcode: "STORE"
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "$1"
                       color: "RED"
     - column: 1
       row: 3
@@ -1648,15 +1419,26 @@ array_config:
                       color: "RED"
             - timestep: 13
               operations:
-                - opcode: "LOAD"
+                - opcode: "CONSTANT"
                   src_operands:
-                    - operand: "SOUTH"
+                    - operand: "#0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  src_operands:
+                    - operand: "EAST"
                       color: "RED"
                   dst_operands:
                     - operand: "WEST"
                       color: "RED"
             - timestep: 14
               operations:
+                - opcode: "ICMP"
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
                 - opcode: "DATA_MOV"
                   src_operands:
                     - operand: "SOUTH"
@@ -1679,15 +1461,18 @@ array_config:
                   dst_operands:
                     - operand: "SOUTH"
                       color: "RED"
-            - timestep: 8
+            - timestep: 12
               operations:
-                - opcode: "GRANT_ONCE"
+                - opcode: "LOAD"
                   src_operands:
-                    - operand: "#0.000000"
+                    - operand: "SOUTH"
                       color: "RED"
                   dst_operands:
-                    - operand: "SOUTH"
+                    - operand: "WEST"
                       color: "RED"
             - timestep: 14
               operations:
-                - opcode: "RETURN"
+                - opcode: "STORE"
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
