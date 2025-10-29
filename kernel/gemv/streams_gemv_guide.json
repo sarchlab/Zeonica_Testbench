@@ -1,0 +1,42 @@
+{
+  "coordinate_system": "bottom-left (0,0), x\u2192, y\u2191",
+  "compiled_ii": 1,
+  "K_example": 4,
+  "north_x_injection_times": {
+    "x[0]": 1,
+    "x[1]": 2,
+    "x[2]": 3,
+    "x[3]": 4
+  },
+  "west_A_injection_times": {
+    "0": {
+      "A[0,0]": 4,
+      "A[0,1]": 5,
+      "A[0,2]": 6,
+      "A[0,3]": 7
+    },
+    "1": {
+      "A[1,0]": 3,
+      "A[1,1]": 4,
+      "A[1,2]": 5,
+      "A[1,3]": 6
+    },
+    "2": {
+      "A[2,0]": 2,
+      "A[2,1]": 3,
+      "A[2,2]": 4,
+      "A[2,3]": 5
+    },
+    "3": {
+      "A[3,0]": 1,
+      "A[3,1]": 2,
+      "A[3,2]": 3,
+      "A[3,3]": 4
+    }
+  },
+  "notes": [
+    "No memory. Supply x via NORTH at column x=0; supply A rowwise via WEST at column x=0.",
+    "Each PE(0,y) keeps accumulator $0; result available after t = (Nrows-1 - y) + K.",
+    "Extend to larger K by continuing the per-k schedule with II=1."
+  ]
+}
