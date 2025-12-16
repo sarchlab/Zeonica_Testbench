@@ -1,0 +1,137 @@
+nodes:
+  - id: 0
+    opcode: "GRANT_ONCE"
+    tile_x: 3
+    tile_y: 2
+    time_step: 0
+  - id: 2
+    opcode: "RETURN"
+    tile_x: 0
+    tile_y: 3
+    time_step: 11
+  - id: 4
+    opcode: "PHI"
+    tile_x: 3
+    tile_y: 2
+    time_step: 1
+  - id: 7
+    opcode: "ADD"
+    tile_x: 3
+    tile_y: 2
+    time_step: 2
+  - id: 8
+    opcode: "GEP"
+    tile_x: 3
+    tile_y: 1
+    time_step: 2
+  - id: 9
+    opcode: "DATA_MOV"
+    tile_x: 2
+    tile_y: 2
+    time_step: 4
+  - id: 12
+    opcode: "ICMP_EQ"
+    tile_x: 2
+    tile_y: 2
+    time_step: 3
+  - id: 13
+    opcode: "LOAD"
+    tile_x: 3
+    tile_y: 2
+    time_step: 3
+  - id: 16
+    opcode: "NOT"
+    tile_x: 2
+    tile_y: 2
+    time_step: 4
+  - id: 17
+    opcode: "MUL"
+    tile_x: 3
+    tile_y: 3
+    time_step: 4
+  - id: 20
+    opcode: "GRANT_PREDICATE"
+    tile_x: 2
+    tile_y: 2
+    time_step: 5
+  - id: 21
+    opcode: "ADD"
+    tile_x: 2
+    tile_y: 3
+    time_step: 5
+  - id: 24
+    opcode: "DIV"
+    tile_x: 2
+    tile_y: 2
+    time_step: 6
+  - id: 26
+    opcode: "SEXT"
+    tile_x: 1
+    tile_y: 2
+    time_step: 7
+  - id: 28
+    opcode: "GEP"
+    tile_x: 1
+    tile_y: 1
+    time_step: 8
+  - id: 29
+    opcode: "DATA_MOV"
+    tile_x: 1
+    tile_y: 2
+    time_step: 10
+  - id: 31
+    opcode: "LOAD"
+    tile_x: 1
+    tile_y: 1
+    time_step: 9
+  - id: 33
+    opcode: "ADD"
+    tile_x: 1
+    tile_y: 1
+    time_step: 10
+  - id: 35
+    opcode: "STORE"
+    tile_x: 1
+    tile_y: 2
+    time_step: 11
+edges:
+  - from: 28
+    to: 29
+  - from: 29
+    to: 35
+  - from: 7
+    to: 9
+  - from: 9
+    to: 20
+  - from: 28
+    to: 31
+  - from: 31
+    to: 33
+  - from: 0
+    to: 4
+  - from: 33
+    to: 35
+  - from: 4
+    to: 7
+  - from: 16
+    to: 20
+  - from: 4
+    to: 8
+  - from: 17
+    to: 21
+  - from: 7
+    to: 12
+  - from: 21
+    to: 24
+  - from: 8
+    to: 13
+  - from: 12
+    to: 16
+  - from: 26
+    to: 28
+  - from: 13
+    to: 17
+  - from: 20
+    to: 4
+  - from: 24
+    to: 26
