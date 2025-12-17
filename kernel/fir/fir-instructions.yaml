@@ -16,7 +16,7 @@ array_config:
                   time_step: 3
                   invalid_iterations: 0
                   src_operands:
-                    - operand: ""
+                    - operand: "#0"
                       color: "RED"
                   dst_operands:
                     - operand: "$0"
@@ -97,15 +97,12 @@ array_config:
                       color: "RED"
             - index_per_ii: 4
               operations:
-                - opcode: "VECTOR.REDUCE.ADD"
+                - opcode: "RETURN"
                   id: 40
                   time_step: 9
                   invalid_iterations: 1
                   src_operands:
                     - operand: "WEST"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "EAST"
                       color: "RED"
     - column: 3
       row: 1
@@ -113,15 +110,6 @@ array_config:
       entries:
         - entry_id: "entry0"
           instructions:
-            - index_per_ii: 0
-              operations:
-                - opcode: "RETURN"
-                  id: 42
-                  time_step: 10
-                  invalid_iterations: 2
-                  src_operands:
-                    - operand: "WEST"
-                      color: "RED"
             - index_per_ii: 2
               operations:
                 - opcode: "GEP"
@@ -198,7 +186,7 @@ array_config:
                       color: "RED"
             - index_per_ii: 2
               operations:
-                - opcode: "VADD"
+                - opcode: "ADD"
                   id: 32
                   time_step: 7
                   invalid_iterations: 1
@@ -341,7 +329,7 @@ array_config:
                   src_operands:
                     - operand: "$0"
                       color: "RED"
-                    - operand: "#4"
+                    - operand: "#1"
                       color: "RED"
                   dst_operands:
                     - operand: "WEST"
@@ -372,7 +360,7 @@ array_config:
           instructions:
             - index_per_ii: 0
               operations:
-                - opcode: "VMUL"
+                - opcode: "MUL"
                   id: 27
                   time_step: 5
                   invalid_iterations: 1

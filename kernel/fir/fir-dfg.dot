@@ -16,14 +16,13 @@ digraph DFG {
   n22 [label="DATA_MOV\nID=22\n(1,1) t=7", fillcolor=lightgreen];
   n25 [label="DATA_MOV\nID=25\n(2,3) t=4", fillcolor=lightgreen];
   n26 [label="NOT\nID=26\n(2,2) t=4", fillcolor=white];
-  n27 [label="VMUL\nID=27\n(2,3) t=5", fillcolor=white];
+  n27 [label="MUL\nID=27\n(2,3) t=5", fillcolor=white];
   n28 [label="DATA_MOV\nID=28\n(0,2) t=7", fillcolor=lightgreen];
   n31 [label="GRANT_PREDICATE\nID=31\n(2,2) t=5", fillcolor=white];
-  n32 [label="VADD\nID=32\n(1,2) t=7", fillcolor=white];
+  n32 [label="ADD\nID=32\n(1,2) t=7", fillcolor=white];
   n36 [label="GRANT_PREDICATE\nID=36\n(1,1) t=8", fillcolor=white];
   n37 [label="GRANT_PREDICATE\nID=37\n(0,2) t=8", fillcolor=white];
-  n40 [label="VECTOR.REDUCE.ADD\nID=40\n(2,1) t=9", fillcolor=white];
-  n42 [label="RETURN\nID=42\n(3,1) t=10", fillcolor=white];
+  n40 [label="RETURN\nID=40\n(2,1) t=9", fillcolor=white];
   n110001 [label="DATA_MOV\nID=110001\n(1,1) t=5", fillcolor=lightgreen];
   n220001 [label="DATA_MOV\nID=220001\n(1,2) t=4", fillcolor=lightgreen];
   n240001 [label="DATA_MOV\nID=240001\n(2,2) t=4", fillcolor=lightgreen];
@@ -44,7 +43,6 @@ digraph DFG {
   n19 -> n220001;
   n220001 -> n22;
   n22 -> n36;
-  n40 -> n42;
   n32 -> n37;
   n13 -> n20;
   n300001 -> n32;
