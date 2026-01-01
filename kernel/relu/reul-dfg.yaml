@@ -1,0 +1,284 @@
+nodes:
+  - id: 0
+    opcode: "GRANT_ONCE"
+    tile_x: 3
+    tile_y: 2
+    time_step: 0
+  - id: 3
+    opcode: "YIELD"
+    tile_x: -1
+    tile_y: -1
+    time_step: -1
+  - id: 4
+    opcode: "DATA_MOV"
+    tile_x: 1
+    tile_y: 2
+    time_step: 6
+  - id: 6
+    opcode: "PHI_START"
+    tile_x: 1
+    tile_y: 2
+    time_step: 7
+  - id: 7
+    opcode: "PHI_START"
+    tile_x: 3
+    tile_y: 2
+    time_step: 1
+  - id: 9
+    opcode: "DATA_MOV"
+    tile_x: 2
+    tile_y: 1
+    time_step: 9
+  - id: 12
+    opcode: "ADD"
+    tile_x: 3
+    tile_y: 2
+    time_step: 2
+  - id: 13
+    opcode: "CAST_TRUNC"
+    tile_x: 2
+    tile_y: 2
+    time_step: 2
+  - id: 14
+    opcode: "DATA_MOV"
+    tile_x: 3
+    tile_y: 1
+    time_step: 4
+  - id: 18
+    opcode: "ICMP_EQ"
+    tile_x: 3
+    tile_y: 2
+    time_step: 3
+  - id: 19
+    opcode: "REM"
+    tile_x: 2
+    tile_y: 2
+    time_step: 3
+  - id: 20
+    opcode: "DIV"
+    tile_x: 2
+    tile_y: 2
+    time_step: 4
+  - id: 21
+    opcode: "DATA_MOV"
+    tile_x: 3
+    tile_y: 1
+    time_step: 7
+  - id: 22
+    opcode: "DATA_MOV"
+    tile_x: 3
+    tile_y: 1
+    time_step: 7
+  - id: 26
+    opcode: "GRANT_PREDICATE"
+    tile_x: 3
+    tile_y: 1
+    time_step: 8
+  - id: 27
+    opcode: "NOT"
+    tile_x: 3
+    tile_y: 2
+    time_step: 4
+  - id: 28
+    opcode: "ZEXT"
+    tile_x: 2
+    tile_y: 2
+    time_step: 5
+  - id: 29
+    opcode: "ZEXT"
+    tile_x: 2
+    tile_y: 2
+    time_step: 6
+  - id: 31
+    opcode: "DATA_MOV"
+    tile_x: 1
+    tile_y: 2
+    time_step: 8
+  - id: 33
+    opcode: "DATA_MOV"
+    tile_x: 2
+    tile_y: 3
+    time_step: 7
+  - id: 34
+    opcode: "DATA_MOV"
+    tile_x: 2
+    tile_y: 1
+    time_step: 6
+  - id: 35
+    opcode: "DATA_MOV"
+    tile_x: 2
+    tile_y: 3
+    time_step: 7
+  - id: 37
+    opcode: "RETURN_VOID"
+    tile_x: 3
+    tile_y: 1
+    time_step: 9
+  - id: 38
+    opcode: "GRANT_PREDICATE"
+    tile_x: 1
+    tile_y: 2
+    time_step: 9
+  - id: 39
+    opcode: "GRANT_PREDICATE"
+    tile_x: 3
+    tile_y: 1
+    time_step: 5
+  - id: 40
+    opcode: "GEP"
+    tile_x: 2
+    tile_y: 3
+    time_step: 8
+  - id: 41
+    opcode: "GEP"
+    tile_x: 2
+    tile_y: 1
+    time_step: 7
+  - id: 44
+    opcode: "DATA_MOV"
+    tile_x: 2
+    tile_y: 1
+    time_step: 10
+  - id: 46
+    opcode: "LOAD"
+    tile_x: 2
+    tile_y: 1
+    time_step: 8
+  - id: 49
+    opcode: "ICMP_SGE"
+    tile_x: 2
+    tile_y: 1
+    time_step: 9
+  - id: 51
+    opcode: "SEL"
+    tile_x: 2
+    tile_y: 1
+    time_step: 10
+  - id: 53
+    opcode: "STORE"
+    tile_x: 2
+    tile_y: 1
+    time_step: 11
+  - id: 40001
+    opcode: "DATA_MOV"
+    tile_x: 2
+    tile_y: 2
+    time_step: 1
+  - id: 90001
+    opcode: "DATA_MOV"
+    tile_x: 2
+    tile_y: 2
+    time_step: 8
+  - id: 220001
+    opcode: "DATA_MOV"
+    tile_x: 2
+    tile_y: 2
+    time_step: 4
+  - id: 220002
+    opcode: "DATA_MOV"
+    tile_x: 3
+    tile_y: 2
+    time_step: 5
+  - id: 310001
+    opcode: "DATA_MOV"
+    tile_x: 2
+    tile_y: 2
+    time_step: 5
+  - id: 440001
+    opcode: "DATA_MOV"
+    tile_x: 2
+    tile_y: 2
+    time_step: 9
+edges:
+  - from: 28
+    to: 34
+  - from: 34
+    to: 41
+  - from: 29
+    to: 35
+  - from: 28
+    to: 33
+  - from: 35
+    to: 40
+  - from: 33
+    to: 40
+  - from: 12
+    to: 14
+  - from: 14
+    to: 39
+  - from: 18
+    to: 21
+  - from: 21
+    to: 26
+  - from: 0
+    to: 40001
+  - from: 40001
+    to: 4
+  - from: 4
+    to: 6
+  - from: 6
+    to: 90001
+  - from: 90001
+    to: 9
+  - from: 9
+    to: 51
+  - from: 40
+    to: 440001
+  - from: 440001
+    to: 44
+  - from: 44
+    to: 53
+  - from: 27
+    to: 310001
+  - from: 310001
+    to: 31
+  - from: 31
+    to: 38
+  - from: 18
+    to: 220001
+  - from: 220001
+    to: 220002
+  - from: 220002
+    to: 22
+  - from: 22
+    to: 26
+  - from: 49
+    to: 51
+  - from: 46
+    to: 49
+  - from: 46
+    to: 51
+  - from: 39
+    to: 7
+  - from: 38
+    to: 6
+  - from: 0
+    to: 7
+  - from: 6
+    to: 38
+  - from: 7
+    to: 12
+  - from: 51
+    to: 53
+  - from: 18
+    to: 27
+  - from: 29
+    to: 41
+  - from: 7
+    to: 13
+  - from: 19
+    to: 28
+  - from: 12
+    to: 18
+  - from: 41
+    to: 46
+  - from: 13
+    to: 19
+  - from: 13
+    to: 20
+  - from: 26
+    to: 37
+  - from: 20
+    to: 29
+  - from: 27
+    to: 39
