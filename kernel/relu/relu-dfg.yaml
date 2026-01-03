@@ -4,11 +4,6 @@ nodes:
     tile_x: 3
     tile_y: 2
     time_step: 0
-  - id: 3
-    opcode: "YIELD"
-    tile_x: -1
-    tile_y: -1
-    time_step: -1
   - id: 4
     opcode: "DATA_MOV"
     tile_x: 1

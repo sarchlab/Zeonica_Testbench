@@ -2,7 +2,6 @@ digraph DFG {
   rankdir=LR;
   node [shape=box, style=filled];
   n0 [label="GRANT_ONCE\nID=0\n(3,2) t=0", fillcolor=white];
-  n3 [label="YIELD\nID=3", fillcolor=white];
   n4 [label="DATA_MOV\nID=4\n(1,2) t=6", fillcolor=lightgreen];
   n6 [label="PHI_START\nID=6\n(1,2) t=7", fillcolor=white];
   n7 [label="PHI_START\nID=7\n(3,2) t=1", fillcolor=white];
