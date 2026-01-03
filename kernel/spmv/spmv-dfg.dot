@@ -4,7 +4,6 @@ digraph DFG {
   n0 [label="GRANT_ONCE\nID=0\n(2,1) t=6", fillcolor=white];
   n1 [label="CONSTANT\nID=1\n(2,2) t=0", fillcolor=lightblue];
   n2 [label="GRANT_ONCE\nID=2\n(1,2) t=2", fillcolor=white];
-  n4 [label="YIELD\nID=4", fillcolor=white];
   n8 [label="ICMP_SGT\nID=8\n(2,2) t=1", fillcolor=white];
   n11 [label="NOT\nID=11\n(2,2) t=8", fillcolor=white];
   n12 [label="GRANT_ONCE\nID=12\n(2,2) t=2", fillcolor=white];
