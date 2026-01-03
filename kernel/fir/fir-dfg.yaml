@@ -9,11 +9,6 @@ nodes:
     tile_x: 0
     tile_y: 1
     time_step: 3
-  - id: 4
-    opcode: "YIELD"
-    tile_x: -1
-    tile_y: -1
-    time_step: -1
   - id: 7
     opcode: "PHI_START"
     tile_x: 3
