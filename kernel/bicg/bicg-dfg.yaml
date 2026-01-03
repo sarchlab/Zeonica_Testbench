@@ -34,11 +34,6 @@ nodes:
     tile_x: 1
     tile_y: 3
     time_step: 3
-  - id: 14
-    opcode: "YIELD"
-    tile_x: -1
-    tile_y: -1
-    time_step: -1
   - id: 24
     opcode: "ICMP_SGT"
     tile_x: 0

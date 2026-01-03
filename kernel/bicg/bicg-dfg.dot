@@ -8,7 +8,6 @@ digraph DFG {
   n4 [label="GRANT_ONCE\nID=4\n(3,0) t=12", fillcolor=white];
   n5 [label="GRANT_ONCE\nID=5\n(3,2) t=12", fillcolor=white];
   n6 [label="GRANT_ONCE\nID=6\n(1,3) t=3", fillcolor=white];
-  n14 [label="YIELD\nID=14", fillcolor=white];
   n24 [label="ICMP_SGT\nID=24\n(0,0) t=1", fillcolor=white];
   n26 [label="GRANT_ONCE\nID=26\n(0,1) t=2", fillcolor=white];
   n30 [label="DATA_MOV\nID=30\n(3,2) t=13", fillcolor=lightgreen];
