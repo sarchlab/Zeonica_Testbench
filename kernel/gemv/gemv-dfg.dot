@@ -3,7 +3,6 @@ digraph DFG {
   node [shape=box, style=filled];
   n0 [label="GRANT_ONCE\nID=0\n(0,0) t=0", fillcolor=white];
   n1 [label="GRANT_ONCE\nID=1\n(3,0) t=4", fillcolor=white];
-  n10 [label="YIELD\nID=10", fillcolor=white];
   n14 [label="PHI_START\nID=14\n(0,1) t=1", fillcolor=white];
   n15 [label="PHI_START\nID=15\n(1,0) t=1", fillcolor=white];
   n16 [label="PHI_START\nID=16\n(3,0) t=5", fillcolor=white];
