@@ -70,7 +70,7 @@ nodes:
     tile_y: 2
     time_step: 4
   - id: 28
-    opcode: "VMUL"
+    opcode: "MUL"
     tile_x: 2
     tile_y: 3
     time_step: 4
@@ -78,22 +78,17 @@ nodes:
     opcode: "DATA_MOV"
     tile_x: 1
     tile_y: 1
-    time_step: 7
+    time_step: 6
   - id: 32
     opcode: "GRANT_PREDICATE"
     tile_x: 2
     tile_y: 2
     time_step: 5
   - id: 33
-    opcode: "VADD"
+    opcode: "ADD"
     tile_x: 1
     tile_y: 2
     time_step: 6
-  - id: 36
-    opcode: "DATA_MOV"
-    tile_x: 1
-    tile_y: 1
-    time_step: 7
   - id: 37
     opcode: "GRANT_PREDICATE"
     tile_x: 1
@@ -103,17 +98,17 @@ nodes:
     opcode: "GRANT_PREDICATE"
     tile_x: 1
     tile_y: 1
+    time_step: 7
+  - id: 40
+    opcode: "CTRL_MOV"
+    tile_x: 0
+    tile_y: 1
     time_step: 8
   - id: 41
-    opcode: "VECTOR.REDUCE.ADD"
-    tile_x: 1
-    tile_y: 2
-    time_step: 8
-  - id: 43
     opcode: "RETURN_VALUE"
     tile_x: 1
     tile_y: 2
-    time_step: 9
+    time_step: 8
   - id: 120001
     opcode: "DATA_MOV"
     tile_x: 1
@@ -135,14 +130,14 @@ nodes:
     tile_y: 3
     time_step: 5
 edges:
+  - from: 40
+    to: 8
   - from: 13
     to: 16
   - from: 16
     to: 32
-  - from: 33
-    to: 36
-  - from: 36
-    to: 38
+  - from: 38
+    to: 40
   - from: 28
     to: 310001
   - from: 8
@@ -159,8 +154,8 @@ edges:
     to: 23
   - from: 23
     to: 37
-  - from: 41
-    to: 43
+  - from: 33
+    to: 38
   - from: 310001
     to: 33
   - from: 32
@@ -181,8 +176,6 @@ edges:
     to: 41
   - from: 7
     to: 14
-  - from: 38
-    to: 8
   - from: 7
     to: 15
   - from: 20
