@@ -40,7 +40,7 @@ array_config:
                   src_operands:
                     - operand: "$0"
                       color: "RED"
-                    - operand: "EAST"
+                    - operand: "$1"
                       color: "RED"
                   dst_operands:
                     - operand: "EAST"
@@ -123,6 +123,16 @@ array_config:
                       color: "RED"
                     - operand: "$0"
                       color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 23
+                  time_step: 6
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$1"
+                      color: "RED"
             - index_per_ii: 2
               operations:
                 - opcode: "GRANT_PREDICATE"
@@ -139,16 +149,6 @@ array_config:
                       color: "RED"
             - index_per_ii: 3
               operations:
-                - opcode: "DATA_MOV"
-                  id: 23
-                  time_step: 3
-                  invalid_iterations: 0
-                  src_operands:
-                    - operand: "EAST"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "$1"
-                      color: "RED"
                 - opcode: "RETURN_VALUE"
                   id: 41
                   time_step: 8
@@ -296,6 +296,20 @@ array_config:
                     - operand: "$0"
                       color: "RED"
                     - operand: "#32"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                    - operand: "$0"
+                      color: "RED"
+            - index_per_ii: 4
+              operations:
+                - opcode: "DATA_MOV"
+                  id: 230000
+                  time_step: 4
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "$0"
                       color: "RED"
                   dst_operands:
                     - operand: "WEST"

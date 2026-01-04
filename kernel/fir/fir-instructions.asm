@@ -6,7 +6,7 @@ PE(0,1):
   CTRL_MOV, [EAST, RED] -> [$1] (t=8, inv_iters=1)
 } (idx_per_ii=3)
 {
-  PHI_START, [$0], [EAST, RED] -> [EAST, RED] (t=4, inv_iters=0)
+  PHI_START, [$0], [$1] -> [EAST, RED] (t=4, inv_iters=0)
 } (idx_per_ii=4)
 
 PE(1,1):
@@ -26,12 +26,12 @@ PE(1,2):
 } (idx_per_ii=0)
 {
   ADD, [NORTH, RED], [SOUTH, RED] -> [SOUTH, RED], [$0] (t=6, inv_iters=1)
+  DATA_MOV, [EAST, RED] -> [$1] (t=6, inv_iters=1)
 } (idx_per_ii=1)
 {
   GRANT_PREDICATE, [$0], [$1] -> [$0] (t=7, inv_iters=1)
 } (idx_per_ii=2)
 {
-  DATA_MOV, [EAST, RED] -> [$1] (t=3, inv_iters=0)
   RETURN_VALUE, [$0] (t=8, inv_iters=1)
 } (idx_per_ii=3)
 
@@ -62,8 +62,11 @@ PE(3,2):
   ADD, [$0], [#1] -> [$0], [WEST, RED] (t=2, inv_iters=0)
 } (idx_per_ii=2)
 {
-  ICMP_EQ, [$0], [#32] -> [WEST, RED] (t=3, inv_iters=0)
+  ICMP_EQ, [$0], [#32] -> [WEST, RED], [$0] (t=3, inv_iters=0)
 } (idx_per_ii=3)
+{
+  DATA_MOV, [$0] -> [WEST, RED] (t=4, inv_iters=0)
+} (idx_per_ii=4)
 
 PE(1,3):
 {
