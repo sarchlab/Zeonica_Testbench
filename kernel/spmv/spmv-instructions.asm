@@ -72,7 +72,7 @@ PE(1,2):
   CTRL_MOV, [SOUTH, RED] -> [$1] (t=12, inv_iters=1)
 } (idx_per_ii=3)
 {
-  PHI_START, [$0], [SOUTH, RED] -> [SOUTH, RED], [WEST, RED], [$1], [$0] (t=4, inv_iters=0)
+  PHI_START, [$0], [$1] -> [SOUTH, RED], [WEST, RED], [$1], [$0] (t=4, inv_iters=0)
 } (idx_per_ii=4)
 {
   ADD, [$0], [#1] -> [$2], [SOUTH, RED] (t=5, inv_iters=0)

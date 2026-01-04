@@ -335,7 +335,7 @@ array_config:
                   src_operands:
                     - operand: "$0"
                       color: "RED"
-                    - operand: "SOUTH"
+                    - operand: "$1"
                       color: "RED"
                   dst_operands:
                     - operand: "SOUTH"
