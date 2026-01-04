@@ -109,6 +109,11 @@ nodes:
     tile_x: 2
     tile_y: 3
     time_step: 11
+  - id: 150000
+    opcode: "DATA_MOV"
+    tile_x: 3
+    tile_y: 2
+    time_step: 4
 edges:
   - from: 33
     to: 34
@@ -120,10 +125,12 @@ edges:
     to: 25
   - from: 12
     to: 14
-  - from: 12
-    to: 15
   - from: 14
     to: 18
+  - from: 12
+    to: 150000
+  - from: 150000
+    to: 15
   - from: 15
     to: 18
   - from: 36

@@ -23,13 +23,15 @@ digraph DFG {
   n36 [label="LOAD\nID=36\n(3,3) t=9", fillcolor=white];
   n38 [label="ADD\nID=38\n(2,3) t=10", fillcolor=white];
   n40 [label="STORE\nID=40\n(2,3) t=11", fillcolor=white];
+  n150000 [label="DATA_MOV\nID=150000\n(3,2) t=4", fillcolor=lightgreen];
   n33 -> n34;
   n34 -> n40;
   n7 -> n9;
   n9 -> n25;
   n12 -> n14;
-  n12 -> n15;
   n14 -> n18;
+  n12 -> n150000;
+  n150000 -> n15;
   n15 -> n18;
   n36 -> n38;
   n31 -> n33;

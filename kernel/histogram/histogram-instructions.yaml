@@ -11,6 +11,16 @@ array_config:
           instructions:
             - index_per_ii: 0
               operations:
+                - opcode: "DATA_MOV"
+                  id: 15
+                  time_step: 5
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$1"
+                      color: "RED"
                 - opcode: "GRANT_PREDICATE"
                   id: 18
                   time_step: 10
@@ -31,18 +41,6 @@ array_config:
                   invalid_iterations: 2
                   src_operands:
                     - operand: "$2"
-                      color: "RED"
-            - index_per_ii: 3
-              operations:
-                - opcode: "DATA_MOV"
-                  id: 15
-                  time_step: 3
-                  invalid_iterations: 0
-                  src_operands:
-                    - operand: "NORTH"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "$1"
                       color: "RED"
             - index_per_ii: 4
               operations:
@@ -188,6 +186,8 @@ array_config:
                       color: "RED"
                     - operand: "SOUTH"
                       color: "RED"
+                    - operand: "$0"
+                      color: "RED"
             - index_per_ii: 4
               operations:
                 - opcode: "MUL"
@@ -201,6 +201,16 @@ array_config:
                       color: "RED"
                   dst_operands:
                     - operand: "NORTH"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 150000
+                  time_step: 4
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "SOUTH"
                       color: "RED"
     - column: 2
       row: 3

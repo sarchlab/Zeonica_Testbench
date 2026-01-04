@@ -2,14 +2,12 @@
 
 PE(3,1):
 {
+  DATA_MOV, [NORTH, RED] -> [$1] (t=5, inv_iters=1)
   GRANT_PREDICATE, [$0], [$1] -> [$2] (t=10, inv_iters=2)
 } (idx_per_ii=0)
 {
   RETURN_VOID, [$2] (t=11, inv_iters=2)
 } (idx_per_ii=1)
-{
-  DATA_MOV, [NORTH, RED] -> [$1] (t=3, inv_iters=0)
-} (idx_per_ii=3)
 {
   DATA_MOV, [NORTH, RED] -> [$0] (t=4, inv_iters=0)
 } (idx_per_ii=4)
@@ -40,10 +38,11 @@ PE(3,2):
   ADD, [$0], [#1] -> [$0], [WEST, RED] (t=2, inv_iters=0)
 } (idx_per_ii=2)
 {
-  ICMP_EQ, [$0], [#20] -> [WEST, RED], [SOUTH, RED] (t=3, inv_iters=0)
+  ICMP_EQ, [$0], [#20] -> [WEST, RED], [SOUTH, RED], [$0] (t=3, inv_iters=0)
 } (idx_per_ii=3)
 {
   MUL, [WEST, RED], [#5] -> [NORTH, RED] (t=4, inv_iters=0)
+  DATA_MOV, [$0] -> [SOUTH, RED] (t=4, inv_iters=0)
 } (idx_per_ii=4)
 
 PE(2,3):
