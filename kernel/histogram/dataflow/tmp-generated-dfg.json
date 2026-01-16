@@ -1,0 +1,43 @@
+{
+  "nodes": [
+    {"id": 0, "opcode": "RETURN", "tile_x": 0, "tile_y": 3, "time_step": 11},
+    {"id": 1, "opcode": "GEP", "tile_x": 1, "tile_y": 1, "time_step": 8},
+    {"id": 2, "opcode": "LOAD", "tile_x": 1, "tile_y": 1, "time_step": 9},
+    {"id": 3, "opcode": "ADD", "tile_x": 1, "tile_y": 1, "time_step": 10},
+    {"id": 4, "opcode": "SEXT", "tile_x": 1, "tile_y": 2, "time_step": 7},
+    {"id": 5, "opcode": "DATA_MOV", "tile_x": 1, "tile_y": 2, "time_step": 9},
+    {"id": 6, "opcode": "STORE", "tile_x": 1, "tile_y": 2, "time_step": 11},
+    {"id": 7, "opcode": "DATA_MOV", "tile_x": 2, "tile_y": 2, "time_step": 2},
+    {"id": 8, "opcode": "ICMP_EQ", "tile_x": 2, "tile_y": 2, "time_step": 3},
+    {"id": 9, "opcode": "NOT", "tile_x": 2, "tile_y": 2, "time_step": 4},
+    {"id": 10, "opcode": "GRANT_PREDICATE", "tile_x": 2, "tile_y": 2, "time_step": 5},
+    {"id": 11, "opcode": "DIV", "tile_x": 2, "tile_y": 2, "time_step": 6},
+    {"id": 12, "opcode": "ADD", "tile_x": 2, "tile_y": 3, "time_step": 5},
+    {"id": 13, "opcode": "GEP", "tile_x": 3, "tile_y": 1, "time_step": 2},
+    {"id": 14, "opcode": "GRANT_ONCE", "tile_x": 3, "tile_y": 2, "time_step": 0},
+    {"id": 15, "opcode": "PHI", "tile_x": 3, "tile_y": 2, "time_step": 1},
+    {"id": 16, "opcode": "ADD", "tile_x": 3, "tile_y": 2, "time_step": 2},
+    {"id": 17, "opcode": "LOAD", "tile_x": 3, "tile_y": 2, "time_step": 3},
+    {"id": 18, "opcode": "MUL", "tile_x": 3, "tile_y": 3, "time_step": 4}
+  ],
+  "edges": [
+    {"from": 14, "to": 15},
+    {"from": 15, "to": 13},
+    {"from": 13, "to": 17},
+    {"from": 17, "to": 18},
+    {"from": 18, "to": 12},
+    {"from": 12, "to": 11},
+    {"from": 11, "to": 4},
+    {"from": 4, "to": 1},
+    {"from": 1, "to": 2},
+    {"from": 2, "to": 3},
+    {"from": 3, "to": 6},
+    {"from": 1, "to": 6},
+    {"from": 15, "to": 16},
+    {"from": 16, "to": 8},
+    {"from": 8, "to": 9},
+    {"from": 16, "to": 10},
+    {"from": 9, "to": 10},
+    {"from": 10, "to": 15}
+  ]
+}

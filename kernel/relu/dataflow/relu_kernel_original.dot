@@ -1,0 +1,76 @@
+digraph G {
+  compound = true;
+  subgraph cluster_1 {
+    v2 [label = " ", shape = plain];
+    label = "builtin.module : ()\n\ndlti.dl_spec: #dlti.dl_spec<!llvm....\nllvm.ident: \"clang version 20.1....";
+    subgraph cluster_3 {
+      v4 [label = " ", shape = plain];
+      label = "";
+      subgraph cluster_5 {
+        v6 [label = " ", shape = plain];
+        label = "llvm.func : ()\n\nCConv: #llvm.cconv<ccc>\narg_attrs: [{llvm.nocapture, ll...\nfunction_type: !llvm.func<void (ptr...\nlinkage: #llvm.linkage<extern...\nmemory_effects: #llvm.memory_effects...\nno_unwind: unit\npassthrough: [\"mustprogress\", \"no...\nsym_name: \"_Z6kernelPiS_\"\ntarget_cpu: \"x86-64\"\ntarget_features: #llvm.target_feature...\ntune_cpu: \"generic\"\nunnamed_addr: 1 : i64\nvisibility_: 0 : i64";
+        subgraph cluster_7 {
+          v8 [label = " ", shape = plain];
+          label = "";
+          v9 [label = "arg0", shape = ellipse];
+          v10 [label = "arg1", shape = ellipse];
+          v11 [fillcolor = "0.000000 1.0 1.0", label = "llvm.mlir.constant : (i64)\n\nvalue: 0 : i64", shape = ellipse, style = filled];
+          v12 [fillcolor = "0.000000 1.0 1.0", label = "llvm.mlir.constant : (i32)\n\nvalue: 0 : i32", shape = ellipse, style = filled];
+          v13 [fillcolor = "0.000000 1.0 1.0", label = "llvm.mlir.constant : (i64)\n\nvalue: 1 : i64", shape = ellipse, style = filled];
+          v14 [fillcolor = "0.000000 1.0 1.0", label = "llvm.mlir.constant : (i64)\n\nvalue: 32 : i64", shape = ellipse, style = filled];
+          v15 [fillcolor = "0.090909 1.0 1.0", label = "llvm.br : ()\n", shape = ellipse, style = filled];
+        }
+        subgraph cluster_16 {
+          v17 [label = " ", shape = plain];
+          label = "";
+          v18 [fillcolor = "0.181818 1.0 1.0", label = "llvm.return : ()\n", shape = ellipse, style = filled];
+        }
+        subgraph cluster_19 {
+          v20 [label = " ", shape = plain];
+          label = "";
+          v21 [label = "arg0", shape = ellipse];
+          v22 [fillcolor = "0.272727 1.0 1.0", label = "llvm.getelementptr : (!llvm.ptr)\n\nelem_type: i32\ninbounds: unit\nrawConstantIndices: array<i32: -21474836...", shape = ellipse, style = filled];
+          v23 [fillcolor = "0.363636 1.0 1.0", label = "llvm.load : (i32)\n\nalignment: 4 : i64\nordering: 0 : i64\ntbaa: [#llvm.tbaa_tag<base...", shape = ellipse, style = filled];
+          v24 [fillcolor = "0.454545 1.0 1.0", label = "llvm.icmp : (i1)\n\npredicate: 4 : i64", shape = ellipse, style = filled];
+          v25 [fillcolor = "0.545455 1.0 1.0", label = "llvm.cond_br : ()\n\noperandSegmentSizes: array<i32: 1, 0, 0>", shape = ellipse, style = filled];
+        }
+        subgraph cluster_26 {
+          v27 [label = " ", shape = plain];
+          label = "";
+          v28 [fillcolor = "0.272727 1.0 1.0", label = "llvm.getelementptr : (!llvm.ptr)\n\nelem_type: i32\ninbounds: unit\nrawConstantIndices: array<i32: -21474836...", shape = ellipse, style = filled];
+          v29 [fillcolor = "0.363636 1.0 1.0", label = "llvm.load : (i32)\n\nalignment: 4 : i64\nordering: 0 : i64\ntbaa: [#llvm.tbaa_tag<base...", shape = ellipse, style = filled];
+          v30 [fillcolor = "0.636364 1.0 1.0", label = "llvm.add : (i32)\n", shape = ellipse, style = filled];
+          v31 [fillcolor = "0.727273 1.0 1.0", label = "llvm.store : ()\n\nalignment: 4 : i64\nordering: 0 : i64\ntbaa: [#llvm.tbaa_tag<base...", shape = ellipse, style = filled];
+          v32 [fillcolor = "0.090909 1.0 1.0", label = "llvm.br : ()\n", shape = ellipse, style = filled];
+        }
+        subgraph cluster_33 {
+          v34 [label = " ", shape = plain];
+          label = "";
+          v35 [fillcolor = "0.636364 1.0 1.0", label = "llvm.add : (i64)\n", shape = ellipse, style = filled];
+          v36 [fillcolor = "0.454545 1.0 1.0", label = "llvm.icmp : (i1)\n\npredicate: 0 : i64", shape = ellipse, style = filled];
+          v37 [fillcolor = "0.545455 1.0 1.0", label = "llvm.cond_br : ()\n\nloop_annotation: #llvm.loop_annotatio...\noperandSegmentSizes: array<i32: 1, 0, 1>", shape = ellipse, style = filled];
+        }
+      }
+    }
+  }
+  v11 -> v15 [label = "", style = solid];
+  v9 -> v22 [label = "0", style = solid];
+  v21 -> v22 [label = "1", style = solid];
+  v22 -> v23 [label = "", style = solid];
+  v23 -> v24 [label = "0", style = solid];
+  v12 -> v24 [label = "1", style = solid];
+  v24 -> v25 [label = "", style = solid];
+  v10 -> v28 [label = "0", style = solid];
+  v21 -> v28 [label = "1", style = solid];
+  v28 -> v29 [label = "", style = solid];
+  v29 -> v30 [label = "0", style = solid];
+  v23 -> v30 [label = "1", style = solid];
+  v30 -> v31 [label = "0", style = solid];
+  v28 -> v31 [label = "1", style = solid];
+  v21 -> v35 [label = "0", style = solid];
+  v13 -> v35 [label = "1", style = solid];
+  v35 -> v36 [label = "0", style = solid];
+  v14 -> v36 [label = "1", style = solid];
+  v36 -> v37 [label = "0", style = solid];
+  v35 -> v37 [label = "1", style = solid];
+}

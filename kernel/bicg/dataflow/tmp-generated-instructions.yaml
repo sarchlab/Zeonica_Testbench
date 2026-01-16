@@ -1,0 +1,2006 @@
+array_config:
+  columns: 4
+  rows: 4
+  compiled_ii: 13
+  cores:
+    - column: 0
+      row: 0
+      core_id: "0"
+      entries:
+        - entry_id: "entry0"
+          instructions:
+            - index_per_ii: 0
+              operations:
+                - opcode: "CONSTANT"
+                  id: 1
+                  time_step: 0
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "arg0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 700000
+                  time_step: 13
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+            - index_per_ii: 1
+              operations:
+                - opcode: "ICMP_SGT"
+                  id: 24
+                  time_step: 1
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "#0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+            - index_per_ii: 2
+              operations:
+                - opcode: "GRANT_ONCE"
+                  id: 2
+                  time_step: 2
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "arg1"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                    - operand: "$0"
+                      color: "RED"
+            - index_per_ii: 3
+              operations:
+                - opcode: "DATA_MOV"
+                  id: 310001
+                  time_step: 3
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+            - index_per_ii: 10
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  id: 51
+                  time_step: 10
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "NORTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "$1"
+                      color: "RED"
+            - index_per_ii: 11
+              operations:
+                - opcode: "ICMP_SGT"
+                  id: 63
+                  time_step: 11
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "#0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "NORTH"
+                      color: "RED"
+            - index_per_ii: 12
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  id: 82
+                  time_step: 12
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "$1"
+                      color: "RED"
+                    - operand: "$0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+    - column: 1
+      row: 0
+      core_id: "1"
+      entries:
+        - entry_id: "entry0"
+          instructions:
+            - index_per_ii: 0
+              operations:
+                - opcode: "ZEXT"
+                  id: 103
+                  time_step: 13
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+            - index_per_ii: 1
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  id: 104
+                  time_step: 14
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "$1"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 55
+                  time_step: 14
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 70
+                  time_step: 14
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$1"
+                      color: "RED"
+            - index_per_ii: 2
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  id: 81
+                  time_step: 15
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "$1"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+            - index_per_ii: 4
+              operations:
+                - opcode: "DATA_MOV"
+                  id: 310002
+                  time_step: 4
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+            - index_per_ii: 12
+              operations:
+                - opcode: "NOT"
+                  id: 83
+                  time_step: 12
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "$1"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 1870001
+                  time_step: 12
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+    - column: 2
+      row: 0
+      core_id: "2"
+      entries:
+        - entry_id: "entry0"
+          instructions:
+            - index_per_ii: 0
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  id: 50
+                  time_step: 13
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                    - operand: "NORTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 1870002
+                  time_step: 13
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+            - index_per_ii: 1
+              operations:
+                - opcode: "SHL"
+                  id: 127
+                  time_step: 14
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                    - operand: "#3"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$2"
+                      color: "RED"
+                    - operand: "$1"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 119
+                  time_step: 14
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+            - index_per_ii: 2
+              operations:
+                - opcode: "STORE"
+                  id: 130
+                  time_step: 15
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+            - index_per_ii: 3
+              operations:
+                - opcode: "RETURN_VOID"
+                  id: 149
+                  time_step: 16
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$1"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 91
+                  time_step: 16
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 90
+                  time_step: 16
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$1"
+                      color: "RED"
+            - index_per_ii: 4
+              operations:
+                - opcode: "MEMSET"
+                  id: 150
+                  time_step: 17
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "$1"
+                      color: "RED"
+                    - operand: "$2"
+                      color: "RED"
+            - index_per_ii: 5
+              operations:
+                - opcode: "DATA_MOV"
+                  id: 310003
+                  time_step: 5
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+    - column: 3
+      row: 0
+      core_id: "3"
+      entries:
+        - entry_id: "entry0"
+          instructions:
+            - index_per_ii: 6
+              operations:
+                - opcode: "DATA_MOV"
+                  id: 310004
+                  time_step: 6
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+            - index_per_ii: 12
+              operations:
+                - opcode: "GRANT_ONCE"
+                  id: 4
+                  time_step: 12
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "arg4"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "WEST"
+                      color: "RED"
+    - column: 0
+      row: 1
+      core_id: "4"
+      entries:
+        - entry_id: "entry0"
+          instructions:
+            - index_per_ii: 0
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  id: 88
+                  time_step: 13
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "$1"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+            - index_per_ii: 2
+              operations:
+                - opcode: "GRANT_ONCE"
+                  id: 26
+                  time_step: 2
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                    - operand: "SOUTH"
+                      color: "RED"
+                    - operand: "$1"
+                      color: "RED"
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "EAST"
+                      color: "RED"
+                    - operand: "$2"
+                      color: "RED"
+            - index_per_ii: 3
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  id: 35
+                  time_step: 3
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                    - operand: "$0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "$1"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 300000
+                  time_step: 3
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "$1"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+            - index_per_ii: 4
+              operations:
+                - opcode: "ICMP_SGT"
+                  id: 52
+                  time_step: 4
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "#0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$3"
+                      color: "RED"
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "NORTH"
+                      color: "RED"
+                    - operand: "EAST"
+                      color: "RED"
+            - index_per_ii: 5
+              operations:
+                - opcode: "RETURN_VOID"
+                  id: 211
+                  time_step: 18
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "EAST"
+                      color: "RED"
+            - index_per_ii: 7
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  id: 66
+                  time_step: 7
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "$1"
+                      color: "RED"
+                    - operand: "$0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+            - index_per_ii: 8
+              operations:
+                - opcode: "ZEXT"
+                  id: 87
+                  time_step: 8
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+            - index_per_ii: 9
+              operations:
+                - opcode: "NOT"
+                  id: 33
+                  time_step: 9
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "$2"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "EAST"
+                      color: "RED"
+            - index_per_ii: 10
+              operations:
+                - opcode: "DATA_MOV"
+                  id: 400000
+                  time_step: 10
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+            - index_per_ii: 12
+              operations:
+                - opcode: "NOT"
+                  id: 67
+                  time_step: 12
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "$3"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "$1"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 690001
+                  time_step: 12
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+    - column: 1
+      row: 1
+      core_id: "5"
+      entries:
+        - entry_id: "entry0"
+          instructions:
+            - index_per_ii: 0
+              operations:
+                - opcode: "GEP"
+                  id: 132
+                  time_step: 13
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$2"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 690002
+                  time_step: 13
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                - opcode: "CTRL_MOV"
+                  id: 192
+                  time_step: 13
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$2"
+                      color: "RED"
+            - index_per_ii: 1
+              operations:
+                - opcode: "GEP"
+                  id: 133
+                  time_step: 14
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$3"
+                      color: "RED"
+                    - operand: "$4"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                    - operand: "$0"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 102
+                  time_step: 14
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$4"
+                      color: "RED"
+            - index_per_ii: 2
+              operations:
+                - opcode: "LOAD"
+                  id: 153
+                  time_step: 15
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 160
+                  time_step: 15
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$1"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 139
+                  time_step: 15
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$3"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 112
+                  time_step: 15
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$5"
+                      color: "RED"
+            - index_per_ii: 3
+              operations:
+                - opcode: "DATA_MOV"
+                  id: 280001
+                  time_step: 3
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                - opcode: "FMUL_FADD"
+                  id: 168
+                  time_step: 16
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "$1"
+                      color: "RED"
+                    - operand: "$3"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+            - index_per_ii: 4
+              operations:
+                - opcode: "DATA_MOV"
+                  id: 300001
+                  time_step: 4
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                - opcode: "PHI"
+                  id: 203
+                  time_step: 17
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$4"
+                      color: "RED"
+                    - operand: "$5"
+                      color: "RED"
+                    - operand: "NORTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                - opcode: "CTRL_MOV"
+                  id: 210
+                  time_step: 17
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$3"
+                      color: "RED"
+            - index_per_ii: 5
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  id: 64
+                  time_step: 5
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "$1"
+                      color: "RED"
+            - index_per_ii: 6
+              operations:
+                - opcode: "PHI_START"
+                  id: 85
+                  time_step: 6
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "EAST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                    - operand: "$0"
+                      color: "RED"
+                - opcode: "CTRL_MOV"
+                  id: 191
+                  time_step: 19
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$5"
+                      color: "RED"
+            - index_per_ii: 7
+              operations:
+                - opcode: "PHI_START"
+                  id: 108
+                  time_step: 7
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "$2"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                    - operand: "$4"
+                      color: "RED"
+                    - operand: "$2"
+                      color: "RED"
+                    - operand: "NORTH"
+                      color: "RED"
+            - index_per_ii: 8
+              operations:
+                - opcode: "PHI_START"
+                  id: 84
+                  time_step: 8
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "$1"
+                      color: "RED"
+                    - operand: "$3"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                    - operand: "$1"
+                      color: "RED"
+                    - operand: "$0"
+                      color: "RED"
+            - index_per_ii: 9
+              operations:
+                - opcode: "PHI_START"
+                  id: 105
+                  time_step: 9
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "$5"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$3"
+                      color: "RED"
+                    - operand: "NORTH"
+                      color: "RED"
+                    - operand: "$0"
+                      color: "RED"
+            - index_per_ii: 10
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  id: 166
+                  time_step: 10
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "NORTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 390001
+                  time_step: 10
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+            - index_per_ii: 11
+              operations:
+                - opcode: "ADD"
+                  id: 180
+                  time_step: 11
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "#1"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                    - operand: "SOUTH"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 400001
+                  time_step: 11
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+            - index_per_ii: 12
+              operations:
+                - opcode: "GEP"
+                  id: 106
+                  time_step: 12
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "$1"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+    - column: 2
+      row: 1
+      core_id: "6"
+      entries:
+        - entry_id: "entry0"
+          instructions:
+            - index_per_ii: 0
+              operations:
+                - opcode: "PHI_START"
+                  id: 109
+                  time_step: 13
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$1"
+                      color: "RED"
+                    - operand: "$2"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$2"
+                      color: "RED"
+                    - operand: "NORTH"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 1190000
+                  time_step: 13
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 116
+                  time_step: 13
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+            - index_per_ii: 1
+              operations:
+                - opcode: "LOAD"
+                  id: 128
+                  time_step: 14
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 69
+                  time_step: 14
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 1390001
+                  time_step: 14
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 187
+                  time_step: 14
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$1"
+                      color: "RED"
+            - index_per_ii: 2
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  id: 80
+                  time_step: 15
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                    - operand: "$0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 1630001
+                  time_step: 15
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+            - index_per_ii: 3
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  id: 206
+                  time_step: 16
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$1"
+                      color: "RED"
+                    - operand: "NORTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "WEST"
+                      color: "RED"
+            - index_per_ii: 4
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  id: 181
+                  time_step: 17
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$2"
+                      color: "RED"
+                    - operand: "$3"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$2"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 178
+                  time_step: 17
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+            - index_per_ii: 5
+              operations:
+                - opcode: "DATA_MOV"
+                  id: 300002
+                  time_step: 5
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                - opcode: "STORE"
+                  id: 185
+                  time_step: 18
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "$4"
+                      color: "RED"
+                - opcode: "CTRL_MOV"
+                  id: 2090002
+                  time_step: 18
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "WEST"
+                      color: "RED"
+            - index_per_ii: 7
+              operations:
+                - opcode: "DATA_MOV"
+                  id: 99
+                  time_step: 7
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$1"
+                      color: "RED"
+            - index_per_ii: 8
+              operations:
+                - opcode: "DATA_MOV"
+                  id: 1230001
+                  time_step: 8
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+            - index_per_ii: 9
+              operations:
+                - opcode: "DATA_MOV"
+                  id: 97
+                  time_step: 9
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+            - index_per_ii: 11
+              operations:
+                - opcode: "DATA_MOV"
+                  id: 390002
+                  time_step: 11
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+            - index_per_ii: 12
+              operations:
+                - opcode: "GEP"
+                  id: 107
+                  time_step: 12
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "NORTH"
+                      color: "RED"
+                    - operand: "$4"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 400002
+                  time_step: 12
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 174
+                  time_step: 12
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$3"
+                      color: "RED"
+    - column: 3
+      row: 1
+      core_id: "7"
+      entries:
+        - entry_id: "entry0"
+          instructions:
+            - index_per_ii: 0
+              operations:
+                - opcode: "GRANT_ONCE"
+                  id: 3
+                  time_step: 13
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "arg3"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$1"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 1450000
+                  time_step: 13
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$1"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+            - index_per_ii: 1
+              operations:
+                - opcode: "LOAD"
+                  id: 155
+                  time_step: 14
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "WEST"
+                      color: "RED"
+            - index_per_ii: 2
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  id: 37
+                  time_step: 15
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$1"
+                      color: "RED"
+                    - operand: "$2"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+            - index_per_ii: 6
+              operations:
+                - opcode: "DATA_MOV"
+                  id: 300003
+                  time_step: 6
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+            - index_per_ii: 7
+              operations:
+                - opcode: "DATA_MOV"
+                  id: 31
+                  time_step: 7
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$2"
+                      color: "RED"
+            - index_per_ii: 9
+              operations:
+                - opcode: "DATA_MOV"
+                  id: 123
+                  time_step: 9
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+            - index_per_ii: 12
+              operations:
+                - opcode: "GEP"
+                  id: 134
+                  time_step: 12
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "$1"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 390003
+                  time_step: 12
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+    - column: 0
+      row: 2
+      core_id: "8"
+      entries:
+        - entry_id: "entry0"
+          instructions:
+            - index_per_ii: 2
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  id: 182
+                  time_step: 15
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$1"
+                      color: "RED"
+                    - operand: "$2"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$2"
+                      color: "RED"
+            - index_per_ii: 3
+              operations:
+                - opcode: "DATA_MOV"
+                  id: 320001
+                  time_step: 3
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                - opcode: "GRANT_PREDICATE"
+                  id: 204
+                  time_step: 16
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "EAST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$1"
+                      color: "RED"
+            - index_per_ii: 5
+              operations:
+                - opcode: "DATA_MOV"
+                  id: 59
+                  time_step: 5
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+            - index_per_ii: 7
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  id: 65
+                  time_step: 7
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                    - operand: "$0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+            - index_per_ii: 8
+              operations:
+                - opcode: "ZEXT"
+                  id: 86
+                  time_step: 8
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+            - index_per_ii: 9
+              operations:
+                - opcode: "PHI_START"
+                  id: 110
+                  time_step: 9
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                    - operand: "$1"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+            - index_per_ii: 10
+              operations:
+                - opcode: "PHI_START"
+                  id: 135
+                  time_step: 10
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "$2"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$1"
+                      color: "RED"
+                    - operand: "EAST"
+                      color: "RED"
+            - index_per_ii: 11
+              operations:
+                - opcode: "DATA_MOV"
+                  id: 175
+                  time_step: 11
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$2"
+                      color: "RED"
+            - index_per_ii: 12
+              operations:
+                - opcode: "DATA_MOV"
+                  id: 171
+                  time_step: 12
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+    - column: 1
+      row: 2
+      core_id: "9"
+      entries:
+        - entry_id: "entry0"
+          instructions:
+            - index_per_ii: 0
+              operations:
+                - opcode: "ICMP_EQ"
+                  id: 193
+                  time_step: 13
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "$1"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "$1"
+                      color: "RED"
+            - index_per_ii: 1
+              operations:
+                - opcode: "LOAD"
+                  id: 152
+                  time_step: 14
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+            - index_per_ii: 2
+              operations:
+                - opcode: "LOAD"
+                  id: 154
+                  time_step: 15
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 2000001
+                  time_step: 15
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "WEST"
+                      color: "RED"
+            - index_per_ii: 3
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  id: 197
+                  time_step: 16
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "$1"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+            - index_per_ii: 4
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  id: 34
+                  time_step: 4
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                    - operand: "SOUTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+            - index_per_ii: 5
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  id: 183
+                  time_step: 18
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$3"
+                      color: "RED"
+                    - operand: "$4"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+            - index_per_ii: 8
+              operations:
+                - opcode: "ADD"
+                  id: 131
+                  time_step: 8
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                    - operand: "#1"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "$2"
+                      color: "RED"
+            - index_per_ii: 9
+              operations:
+                - opcode: "ICMP_EQ"
+                  id: 151
+                  time_step: 9
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "SOUTH"
+                      color: "RED"
+                    - operand: "$1"
+                      color: "RED"
+                    - operand: "EAST"
+                      color: "RED"
+            - index_per_ii: 10
+              operations:
+                - opcode: "NOT"
+                  id: 167
+                  time_step: 10
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "$4"
+                      color: "RED"
+                    - operand: "WEST"
+                      color: "RED"
+                    - operand: "EAST"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 114
+                  time_step: 10
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$3"
+                      color: "RED"
+            - index_per_ii: 11
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  id: 165
+                  time_step: 11
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                    - operand: "$1"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$1"
+                      color: "RED"
+                    - operand: "WEST"
+                      color: "RED"
+            - index_per_ii: 12
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  id: 184
+                  time_step: 12
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "$2"
+                      color: "RED"
+                    - operand: "$0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 188
+                  time_step: 12
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+    - column: 2
+      row: 2
+      core_id: "10"
+      entries:
+        - entry_id: "entry0"
+          instructions:
+            - index_per_ii: 0
+              operations:
+                - opcode: "LOAD"
+                  id: 129
+                  time_step: 13
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+            - index_per_ii: 1
+              operations:
+                - opcode: "NOT"
+                  id: 198
+                  time_step: 14
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$2"
+                      color: "RED"
+                    - operand: "EAST"
+                      color: "RED"
+                    - operand: "WEST"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 540001
+                  time_step: 14
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 124
+                  time_step: 14
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+            - index_per_ii: 2
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  id: 164
+                  time_step: 15
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "$1"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 138
+                  time_step: 15
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 145
+                  time_step: 15
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$1"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 2020000
+                  time_step: 15
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$2"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+            - index_per_ii: 3
+              operations:
+                - opcode: "FMUL_FADD"
+                  id: 169
+                  time_step: 16
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "WEST"
+                      color: "RED"
+                    - operand: "SOUTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+            - index_per_ii: 4
+              operations:
+                - opcode: "STORE"
+                  id: 186
+                  time_step: 17
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "$1"
+                      color: "RED"
+                - opcode: "CTRL_MOV"
+                  id: 2090001
+                  time_step: 17
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+            - index_per_ii: 10
+              operations:
+                - opcode: "DATA_MOV"
+                  id: 156
+                  time_step: 10
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$1"
+                      color: "RED"
+            - index_per_ii: 11
+              operations:
+                - opcode: "DATA_MOV"
+                  id: 1740001
+                  time_step: 11
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+    - column: 3
+      row: 2
+      core_id: "11"
+      entries:
+        - entry_id: "entry0"
+          instructions:
+            - index_per_ii: 0
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  id: 49
+                  time_step: 13
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "SOUTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "WEST"
+                      color: "RED"
+            - index_per_ii: 1
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  id: 36
+                  time_step: 14
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$1"
+                      color: "RED"
+                    - operand: "$2"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$1"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 1450001
+                  time_step: 14
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "WEST"
+                      color: "RED"
+            - index_per_ii: 2
+              operations:
+                - opcode: "DATA_MOV"
+                  id: 201
+                  time_step: 15
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+            - index_per_ii: 3
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  id: 205
+                  time_step: 16
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                    - operand: "$0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 46
+                  time_step: 16
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+            - index_per_ii: 5
+              operations:
+                - opcode: "MEMSET"
+                  id: 89
+                  time_step: 18
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "$1"
+                      color: "RED"
+                    - operand: "NORTH"
+                      color: "RED"
+            - index_per_ii: 7
+              operations:
+                - opcode: "DATA_MOV"
+                  id: 30
+                  time_step: 7
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$2"
+                      color: "RED"
+            - index_per_ii: 12
+              operations:
+                - opcode: "GRANT_ONCE"
+                  id: 5
+                  time_step: 12
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "#0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$1"
+                      color: "RED"
+                    - operand: "$0"
+                      color: "RED"
+    - column: 0
+      row: 3
+      core_id: "12"
+      entries:
+        - entry_id: "entry0"
+          instructions:
+            - index_per_ii: 0
+              operations:
+                - opcode: "ZEXT"
+                  id: 53
+                  time_step: 13
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+            - index_per_ii: 1
+              operations:
+                - opcode: "SHL"
+                  id: 68
+                  time_step: 14
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "#3"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+            - index_per_ii: 4
+              operations:
+                - opcode: "DATA_MOV"
+                  id: 32
+                  time_step: 4
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+            - index_per_ii: 6
+              operations:
+                - opcode: "GRANT_PREDICATE"
+                  id: 38
+                  time_step: 6
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                    - operand: "$0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
+                    - operand: "SOUTH"
+                      color: "RED"
+    - column: 1
+      row: 3
+      core_id: "13"
+      entries:
+        - entry_id: "entry0"
+          instructions:
+            - index_per_ii: 2
+              operations:
+                - opcode: "DATA_MOV"
+                  id: 790001
+                  time_step: 15
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+            - index_per_ii: 3
+              operations:
+                - opcode: "GRANT_ONCE"
+                  id: 6
+                  time_step: 3
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "#0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+            - index_per_ii: 5
+              operations:
+                - opcode: "GRANT_ONCE"
+                  id: 0
+                  time_step: 5
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "arg0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "WEST"
+                      color: "RED"
+    - column: 2
+      row: 3
+      core_id: "14"
+      entries:
+        - entry_id: "entry0"
+          instructions:
+            - index_per_ii: 3
+              operations:
+                - opcode: "DATA_MOV"
+                  id: 790002
+                  time_step: 16
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "EAST"
+                      color: "RED"
+    - column: 3
+      row: 3
+      core_id: "15"
+      entries:
+        - entry_id: "entry0"
+          instructions:
+            - index_per_ii: 4
+              operations:
+                - opcode: "DATA_MOV"
+                  id: 790003
+                  time_step: 17
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "WEST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "SOUTH"
+                      color: "RED"

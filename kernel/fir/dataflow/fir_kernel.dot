@@ -1,0 +1,70 @@
+digraph G {
+  compound = true;
+  subgraph cluster_1 {
+    v2 [label = " ", shape = plain];
+    label = "builtin.module : ()\n\ndlti.dl_spec: #dlti.dl_spec<i32 = ...\nllvm.ident: \"clang version 20.1....";
+    subgraph cluster_3 {
+      v4 [label = " ", shape = plain];
+      label = "";
+      subgraph cluster_5 {
+        v6 [label = " ", shape = plain];
+        label = "func.func : ()\n\nCConv: #llvm.cconv<ccc>\naccelerator: \"neura\"\narg_attrs: [{llvm.nocapture, ll...\ndataflow_mode: \"predicate\"\nfunction_type: (!llvm.ptr, !llvm.pt...\nlinkage: #llvm.linkage<extern...\nmemory_effects: #llvm.memory_effects...\nno_unwind: unit\npassthrough: [\"mustprogress\", \"no...\nres_attrs: [{llvm.noundef}]\nsym_name: \"_Z6kernelPiS_S_\"\ntarget_cpu: \"x86-64\"\ntarget_features: #llvm.target_feature...\ntune_cpu: \"generic\"\nunnamed_addr: 1 : i64\nvisibility_: 0 : i64\nwill_return: unit";
+        subgraph cluster_7 {
+          v8 [label = " ", shape = plain];
+          label = "";
+          v9 [label = "arg0", shape = ellipse];
+          v10 [label = "arg1", shape = ellipse];
+          v11 [label = "arg2", shape = ellipse];
+          v12 [fillcolor = "0.000000 1.0 1.0", label = "neura.grant_once : (!neura.data<i64, i1>)\n\nconstant_value: 0 : i64", shape = ellipse, style = filled];
+          v13 [fillcolor = "0.000000 1.0 1.0", label = "neura.grant_once : (!neura.data<i32, i1>)\n\nconstant_value: 0 : i32", shape = ellipse, style = filled];
+          v14 [fillcolor = "0.066667 1.0 1.0", label = "neura.reserve : (!neura.data<i32, i1>)\n", shape = ellipse, style = filled];
+          v15 [fillcolor = "0.133333 1.0 1.0", label = "neura.phi_start : (!neura.data<i32, i1>)\n", shape = ellipse, style = filled];
+          v16 [fillcolor = "0.066667 1.0 1.0", label = "neura.reserve : (!neura.data<i64, i1>)\n", shape = ellipse, style = filled];
+          v17 [fillcolor = "0.133333 1.0 1.0", label = "neura.phi_start : (!neura.data<i64, i1>)\n", shape = ellipse, style = filled];
+          v18 [fillcolor = "0.200000 1.0 1.0", label = "neura.gep : (!neura.data<!llvm.pt...)\n\nlhs_value: \"%arg0\"\noperandSegmentSizes: array<i32: 0, 1>", shape = ellipse, style = filled];
+          v19 [fillcolor = "0.266667 1.0 1.0", label = "neura.load : (!neura.data<i32, i1>)\n", shape = ellipse, style = filled];
+          v20 [fillcolor = "0.200000 1.0 1.0", label = "neura.gep : (!neura.data<!llvm.pt...)\n\nlhs_value: \"%arg2\"\noperandSegmentSizes: array<i32: 0, 1>", shape = ellipse, style = filled];
+          v21 [fillcolor = "0.266667 1.0 1.0", label = "neura.load : (!neura.data<i32, i1>)\n", shape = ellipse, style = filled];
+          v22 [fillcolor = "0.333333 1.0 1.0", label = "neura.mul : (!neura.data<i32, i1>)\n", shape = ellipse, style = filled];
+          v23 [fillcolor = "0.400000 1.0 1.0", label = "neura.add : (!neura.data<i32, i1>)\n", shape = ellipse, style = filled];
+          v24 [fillcolor = "0.400000 1.0 1.0", label = "neura.add : (!neura.data<i64, i1>)\n\nrhs_value: 1 : i64", shape = ellipse, style = filled];
+          v25 [fillcolor = "0.466667 1.0 1.0", label = "neura.icmp : (!neura.data<i1, i1>)\n\ncmpType: \"eq\"\nrhs_value: 32 : i64", shape = ellipse, style = filled];
+          v26 [fillcolor = "0.533333 1.0 1.0", label = "neura.not : (!neura.data<i1, i1>)\n", shape = ellipse, style = filled];
+          v27 [fillcolor = "0.600000 1.0 1.0", label = "neura.grant_predicate : (!neura.data<i64, i1>)\n", shape = ellipse, style = filled];
+          v28 [fillcolor = "0.666667 1.0 1.0", label = "neura.ctrl_mov : ()\n", shape = ellipse, style = filled];
+          v29 [fillcolor = "0.600000 1.0 1.0", label = "neura.grant_predicate : (!neura.data<i32, i1>)\n", shape = ellipse, style = filled];
+          v30 [fillcolor = "0.666667 1.0 1.0", label = "neura.ctrl_mov : ()\n", shape = ellipse, style = filled];
+          v31 [fillcolor = "0.600000 1.0 1.0", label = "neura.grant_predicate : (!neura.data<i32, i1>)\n", shape = ellipse, style = filled];
+          v32 [fillcolor = "0.733333 1.0 1.0", label = "neura.return_value : ()\n", shape = ellipse, style = filled];
+          v33 [fillcolor = "0.800000 1.0 1.0", label = "neura.yield : ()\n", shape = ellipse, style = filled];
+        }
+      }
+    }
+  }
+  v13 -> v15 [label = "0", style = solid];
+  v14 -> v15 [label = "1", style = solid];
+  v12 -> v17 [label = "0", style = solid];
+  v16 -> v17 [label = "1", style = solid];
+  v17 -> v18 [label = "", style = solid];
+  v18 -> v19 [label = "", style = solid];
+  v17 -> v20 [label = "", style = solid];
+  v20 -> v21 [label = "", style = solid];
+  v21 -> v22 [label = "0", style = solid];
+  v19 -> v22 [label = "1", style = solid];
+  v22 -> v23 [label = "0", style = solid];
+  v15 -> v23 [label = "1", style = solid];
+  v17 -> v24 [label = "", style = solid];
+  v24 -> v25 [label = "", style = solid];
+  v25 -> v26 [label = "", style = solid];
+  v24 -> v27 [label = "0", style = solid];
+  v26 -> v27 [label = "1", style = solid];
+  v27 -> v28 [label = "0", style = solid];
+  v16 -> v28 [label = "1", style = solid];
+  v23 -> v29 [label = "0", style = solid];
+  v26 -> v29 [label = "1", style = solid];
+  v29 -> v30 [label = "0", style = solid];
+  v14 -> v30 [label = "1", style = solid];
+  v23 -> v31 [label = "0", style = solid];
+  v25 -> v31 [label = "1", style = solid];
+  v31 -> v32 [label = "", style = solid];
+}
