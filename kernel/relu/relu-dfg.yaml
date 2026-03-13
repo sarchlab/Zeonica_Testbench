@@ -4,214 +4,221 @@ nodes:
     tile_x: 3
     tile_y: 2
     time_step: 0
-  - id: 4
+  - id: 1
+    opcode: "GRANT_ONCE"
+    tile_x: 0
+    tile_y: 2
+    time_step: 3
+  - id: 7
     opcode: "PHI_START"
     tile_x: 2
     tile_y: 2
     time_step: 1
-  - id: 6
+  - id: 8
+    opcode: "PHI_START"
+    tile_x: 0
+    tile_y: 2
+    time_step: 4
+  - id: 10
     opcode: "DATA_MOV"
-    tile_x: 3
+    tile_x: 2
     tile_y: 1
     time_step: 4
-  - id: 8
+  - id: 14
     opcode: "ADD"
     tile_x: 2
     tile_y: 2
     time_step: 2
-  - id: 9
+  - id: 15
+    opcode: "GEP"
+    tile_x: 2
+    tile_y: 1
+    time_step: 5
+  - id: 16
     opcode: "GEP"
     tile_x: 3
     tile_y: 2
     time_step: 2
-  - id: 13
+  - id: 21
     opcode: "ICMP_EQ"
     tile_x: 2
     tile_y: 2
     time_step: 3
-  - id: 14
+  - id: 22
     opcode: "LOAD"
     tile_x: 3
+    tile_y: 0
+    time_step: 4
+  - id: 23
+    opcode: "DATA_MOV"
+    tile_x: 1
     tile_y: 2
-    time_step: 3
-  - id: 15
+    time_step: 4
+  - id: 26
     opcode: "DATA_MOV"
-    tile_x: 2
-    tile_y: 1
-    time_step: 7
-  - id: 16
-    opcode: "DATA_MOV"
-    tile_x: 2
-    tile_y: 1
-    time_step: 7
-  - id: 18
-    opcode: "DATA_MOV"
-    tile_x: 3
-    tile_y: 3
+    tile_x: 1
+    tile_y: 0
     time_step: 6
-  - id: 20
+  - id: 28
     opcode: "GRANT_PREDICATE"
-    tile_x: 2
-    tile_y: 1
-    time_step: 8
-  - id: 21
+    tile_x: 1
+    tile_y: 2
+    time_step: 5
+  - id: 29
     opcode: "NOT"
     tile_x: 2
     tile_y: 2
     time_step: 4
-  - id: 22
-    opcode: "ICMP_SGT"
-    tile_x: 3
-    tile_y: 2
-    time_step: 4
-  - id: 25
-    opcode: "DATA_MOV"
-    tile_x: 3
-    tile_y: 3
-    time_step: 6
-  - id: 27
-    opcode: "RETURN_VOID"
-    tile_x: 2
-    tile_y: 1
-    time_step: 9
-  - id: 28
-    opcode: "GRANT_PREDICATE"
-    tile_x: 2
-    tile_y: 2
-    time_step: 5
-  - id: 29
-    opcode: "GRANT_PREDICATE"
-    tile_x: 3
-    tile_y: 3
-    time_step: 7
   - id: 30
-    opcode: "GRANT_PREDICATE"
+    opcode: "ICMP_SGE"
     tile_x: 3
-    tile_y: 1
+    tile_y: 0
     time_step: 5
-  - id: 32
-    opcode: "DATA_MOV"
-    tile_x: 2
-    tile_y: 3
-    time_step: 8
-  - id: 34
-    opcode: "GEP"
-    tile_x: 3
-    tile_y: 1
-    time_step: 6
   - id: 35
-    opcode: "DATA_MOV"
-    tile_x: 2
+    opcode: "RETURN_VOID"
+    tile_x: 1
     tile_y: 3
-    time_step: 9
+    time_step: 6
+  - id: 36
+    opcode: "GRANT_PREDICATE"
+    tile_x: 1
+    tile_y: 2
+    time_step: 6
   - id: 37
-    opcode: "LOAD"
+    opcode: "GRANT_PREDICATE"
     tile_x: 2
-    tile_y: 1
+    tile_y: 2
+    time_step: 5
+  - id: 38
+    opcode: "SEL"
+    tile_x: 1
+    tile_y: 0
     time_step: 7
   - id: 39
-    opcode: "ADD"
-    tile_x: 2
-    tile_y: 3
-    time_step: 9
-  - id: 41
+    opcode: "CTRL_MOV"
+    tile_x: 0
+    tile_y: 2
+    time_step: 8
+  - id: 42
     opcode: "STORE"
-    tile_x: 2
-    tile_y: 3
-    time_step: 10
-  - id: 60001
+    tile_x: 1
+    tile_y: 0
+    time_step: 8
+  - id: 120000
     opcode: "DATA_MOV"
-    tile_x: 2
+    tile_x: 0
+    tile_y: 2
+    time_step: 5
+  - id: 130001
+    opcode: "DATA_MOV"
+    tile_x: 1
+    tile_y: 2
+    time_step: 5
+  - id: 130002
+    opcode: "DATA_MOV"
+    tile_x: 1
     tile_y: 1
-    time_step: 2
-  - id: 160000
+    time_step: 6
+  - id: 190001
+    opcode: "DATA_MOV"
+    tile_x: 1
+    tile_y: 1
+    time_step: 7
+  - id: 200001
+    opcode: "DATA_MOV"
+    tile_x: 3
+    tile_y: 1
+    time_step: 3
+  - id: 240000
     opcode: "DATA_MOV"
     tile_x: 2
     tile_y: 2
     time_step: 4
-  - id: 350001
+  - id: 260001
     opcode: "DATA_MOV"
-    tile_x: 3
-    tile_y: 2
-    time_step: 7
-  - id: 350002
-    opcode: "DATA_MOV"
-    tile_x: 3
-    tile_y: 3
-    time_step: 8
-  - id: 380001
+    tile_x: 2
+    tile_y: 0
+    time_step: 5
+  - id: 320000
     opcode: "DATA_MOV"
     tile_x: 2
     tile_y: 2
-    time_step: 8
+    time_step: 5
+  - id: 340001
+    opcode: "DATA_MOV"
+    tile_x: 2
+    tile_y: 0
+    time_step: 6
 edges:
-  - from: 14
-    to: 18
-  - from: 22
-    to: 25
-  - from: 18
-    to: 29
-  - from: 25
-    to: 29
-  - from: 29
-    to: 32
-  - from: 32
-    to: 39
-  - from: 13
-    to: 15
-  - from: 15
-    to: 20
-  - from: 4
-    to: 60001
-  - from: 60001
-    to: 6
-  - from: 6
-    to: 30
-  - from: 37
-    to: 380001
-  - from: 34
-    to: 350001
-  - from: 350001
-    to: 350002
-  - from: 350002
-    to: 35
-  - from: 35
-    to: 41
-  - from: 13
-    to: 160000
-  - from: 160000
-    to: 16
-  - from: 16
-    to: 20
-  - from: 380001
-    to: 39
-  - from: 0
-    to: 4
-  - from: 4
-    to: 8
-  - from: 28
-    to: 4
-  - from: 34
-    to: 37
-  - from: 4
-    to: 9
-  - from: 30
-    to: 34
-  - from: 8
-    to: 28
-  - from: 20
-    to: 27
   - from: 39
-    to: 41
-  - from: 8
-    to: 13
+    to: 8
+  - from: 7
+    to: 10
+  - from: 10
+    to: 15
+  - from: 36
+    to: 39
   - from: 21
+    to: 23
+  - from: 23
     to: 28
-  - from: 9
-    to: 14
-  - from: 13
-    to: 21
+  - from: 16
+    to: 200001
+  - from: 30
+    to: 340001
+  - from: 22
+    to: 260001
+  - from: 260001
+    to: 26
+  - from: 26
+    to: 38
+  - from: 8
+    to: 130001
+  - from: 130001
+    to: 130002
+  - from: 15
+    to: 190001
+  - from: 8
+    to: 120000
+  - from: 29
+    to: 320000
+  - from: 21
+    to: 240000
+  - from: 29
+    to: 37
+  - from: 320000
+    to: 36
+  - from: 28
+    to: 35
+  - from: 340001
+    to: 38
+  - from: 0
+    to: 7
   - from: 14
+    to: 21
+  - from: 1
+    to: 8
+  - from: 190001
+    to: 42
+  - from: 7
+    to: 14
+  - from: 37
+    to: 7
+  - from: 7
+    to: 16
+  - from: 240000
+    to: 28
+  - from: 38
+    to: 42
+  - from: 120000
+    to: 36
+  - from: 21
+    to: 29
+  - from: 130002
+    to: 38
+  - from: 14
+    to: 37
+  - from: 200001
     to: 22
   - from: 22
     to: 30
