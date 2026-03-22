@@ -37,7 +37,7 @@ PE(1,1):
 
 PE(2,1):
 {
-  GEP, [$0] -> [WEST, RED] (t=5, inv_iters=1)
+  GEP, [arg1], [$0] -> [WEST, RED] (t=5, inv_iters=1)
 } (idx_per_ii=0)
 {
   DATA_MOV, [NORTH, RED] -> [$0] (t=2, inv_iters=0)
@@ -98,7 +98,7 @@ PE(3,2):
   GRANT_ONCE, [#0] -> [WEST, RED] (t=0, inv_iters=0)
 } (idx_per_ii=0)
 {
-  GEP, [WEST, RED] -> [SOUTH, RED] (t=2, inv_iters=0)
+  GEP, [arg0], [WEST, RED] -> [SOUTH, RED] (t=2, inv_iters=0)
 } (idx_per_ii=2)
 
 PE(1,3):

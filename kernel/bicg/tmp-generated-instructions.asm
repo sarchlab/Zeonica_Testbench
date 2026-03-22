@@ -14,11 +14,11 @@ PE(0,0):
   DATA_MOV, [NORTH, RED] -> [$1] (t=4, inv_iters=0)
 } (idx_per_ii=4)
 {
-  GEP, [$0] -> [EAST, RED] (t=5, inv_iters=0)
+  GEP, [arg1], [$0] -> [EAST, RED] (t=5, inv_iters=0)
   DATA_MOV, [NORTH, RED] -> [NORTH, RED] (t=5, inv_iters=0)
 } (idx_per_ii=5)
 {
-  GEP, [$1] -> [EAST, RED], [NORTH, RED] (t=6, inv_iters=0)
+  GEP, [arg3], [$1] -> [EAST, RED], [NORTH, RED] (t=6, inv_iters=0)
 } (idx_per_ii=6)
 {
   PHI_START, [$2], [$3] -> [$0], [EAST, RED] (t=7, inv_iters=0)
@@ -108,7 +108,7 @@ PE(1,1):
   SHL, [WEST, RED], [#5] -> [$0] (t=2, inv_iters=0)
 } (idx_per_ii=2)
 {
-  GEP, [$0] -> [NORTH, RED] (t=3, inv_iters=0)
+  GEP, [arg0], [$0] -> [NORTH, RED] (t=3, inv_iters=0)
 } (idx_per_ii=3)
 {
   ICMP_EQ, [WEST, RED], [#8] -> [$0], [WEST, RED], [SOUTH, RED] (t=4, inv_iters=0)
@@ -168,10 +168,10 @@ PE(0,2):
   DATA_MOV, [SOUTH, RED] -> [$1] (t=3, inv_iters=0)
 } (idx_per_ii=3)
 {
-  GEP, [$0] -> [EAST, RED] (t=4, inv_iters=0)
+  GEP, [arg2], [$0] -> [EAST, RED] (t=4, inv_iters=0)
 } (idx_per_ii=4)
 {
-  GEP, [$1] -> [NORTH, RED], [$0] (t=5, inv_iters=0)
+  GEP, [arg4], [$1] -> [NORTH, RED], [$0] (t=5, inv_iters=0)
   DATA_MOV, [EAST, RED] -> [SOUTH, RED] (t=5, inv_iters=0)
 } (idx_per_ii=5)
 {
@@ -232,7 +232,7 @@ PE(0,3):
   LOAD, [SOUTH, RED] -> [SOUTH, RED] (t=7, inv_iters=0)
 } (idx_per_ii=7)
 {
-  STORE, [$0] (t=9, inv_iters=0)
+  STORE, [#0], [$0] (t=9, inv_iters=0)
 } (idx_per_ii=9)
 
 PE(3,3):

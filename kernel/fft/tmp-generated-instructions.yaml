@@ -267,6 +267,8 @@ array_config:
                   time_step: 12
                   invalid_iterations: 0
                   src_operands:
+                    - operand: "arg0"
+                      color: "RED"
                     - operand: "NORTH"
                       color: "RED"
                   dst_operands:
@@ -1348,6 +1350,8 @@ array_config:
                   time_step: 12
                   invalid_iterations: 0
                   src_operands:
+                    - operand: "arg1"
+                      color: "RED"
                     - operand: "$0"
                       color: "RED"
                   dst_operands:
@@ -2825,6 +2829,8 @@ array_config:
                   time_step: 11
                   invalid_iterations: 0
                   src_operands:
+                    - operand: "arg3"
+                      color: "RED"
                     - operand: "$0"
                       color: "RED"
                   dst_operands:
@@ -2987,6 +2993,8 @@ array_config:
                   time_step: 11
                   invalid_iterations: 0
                   src_operands:
+                    - operand: "arg2"
+                      color: "RED"
                     - operand: "WEST"
                       color: "RED"
                   dst_operands:
@@ -3053,6 +3061,8 @@ array_config:
                   time_step: 14
                   invalid_iterations: 0
                   src_operands:
+                    - operand: "arg0"
+                      color: "RED"
                     - operand: "EAST"
                       color: "RED"
                   dst_operands:
@@ -3269,6 +3279,8 @@ array_config:
                   time_step: 14
                   invalid_iterations: 0
                   src_operands:
+                    - operand: "arg1"
+                      color: "RED"
                     - operand: "$0"
                       color: "RED"
                   dst_operands:
