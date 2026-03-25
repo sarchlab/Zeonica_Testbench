@@ -277,10 +277,11 @@ PE(1,1):
   DATA_MOV, [NORTH, RED] -> [SOUTH, RED] (t=21, inv_iters=1)
 } (idx_per_ii=7)
 {
-  PHI_START, [WEST, RED], [EAST, RED] -> [$1], [SOUTH, RED], [EAST, RED], [$0], [WEST, RED], [NORTH, RED] (t=8, inv_iters=0)
+  PHI_START, [WEST, RED], [EAST, RED] -> [$2], [SOUTH, RED], [$1], [EAST, RED], [$0], [WEST, RED], [NORTH, RED] (t=8, inv_iters=0)
 } (idx_per_ii=8)
 {
   ICMP_EQ, [EAST, RED], [WEST, RED] -> [$0], [NORTH, RED], [EAST, RED] (t=9, inv_iters=0)
+  DATA_MOV, [$2] -> [$1] (t=9, inv_iters=0)
   DATA_MOV, [$1] -> [SOUTH, RED] (t=9, inv_iters=0)
   DATA_MOV, [$0] -> [WEST, RED] (t=9, inv_iters=0)
 } (idx_per_ii=9)

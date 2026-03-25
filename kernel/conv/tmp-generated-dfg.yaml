@@ -8,7 +8,7 @@ nodes:
     opcode: "DATA_MOV"
     tile_x: 1
     tile_y: 2
-    time_step: 6
+    time_step: 3
   - id: 6
     opcode: "PHI_START"
     tile_x: 2
@@ -53,7 +53,7 @@ nodes:
     opcode: "DATA_MOV"
     tile_x: 2
     tile_y: 0
-    time_step: 10
+    time_step: 7
   - id: 24
     opcode: "NOT"
     tile_x: 2
@@ -73,7 +73,7 @@ nodes:
     opcode: "DATA_MOV"
     tile_x: 1
     tile_y: 1
-    time_step: 10
+    time_step: 6
   - id: 33
     opcode: "GRANT_PREDICATE"
     tile_x: 2
@@ -134,27 +134,27 @@ nodes:
     tile_x: 2
     tile_y: 2
     time_step: 2
-  - id: 100001
+  - id: 100000
     opcode: "DATA_MOV"
     tile_x: 2
     tile_y: 2
     time_step: 8
-  - id: 200001
+  - id: 200000
     opcode: "DATA_MOV"
     tile_x: 1
     tile_y: 2
     time_step: 4
-  - id: 200002
+  - id: 200001
     opcode: "DATA_MOV"
     tile_x: 2
     tile_y: 2
     time_step: 5
-  - id: 200003
+  - id: 200002
     opcode: "DATA_MOV"
     tile_x: 2
     tile_y: 1
     time_step: 6
-  - id: 280001
+  - id: 280000
     opcode: "DATA_MOV"
     tile_x: 1
     tile_y: 2
@@ -164,7 +164,7 @@ nodes:
     tile_x: 3
     tile_y: 2
     time_step: 5
-  - id: 440001
+  - id: 440000
     opcode: "DATA_MOV"
     tile_x: 2
     tile_y: 0
@@ -181,26 +181,26 @@ edges:
   - from: 25
     to: 300000
   - from: 43
-    to: 440001
+    to: 440000
   - from: 7
-    to: 100001
-  - from: 100001
+    to: 100000
+  - from: 100000
     to: 10
   - from: 10
     to: 45
   - from: 24
-    to: 280001
-  - from: 280001
+    to: 280000
+  - from: 280000
     to: 28
   - from: 28
     to: 49
   - from: 17
+    to: 200000
+  - from: 200000
     to: 200001
   - from: 200001
     to: 200002
   - from: 200002
-    to: 200003
-  - from: 200003
     to: 20
   - from: 20
     to: 48
@@ -244,7 +244,7 @@ edges:
     to: 17
   - from: 24
     to: 33
-  - from: 440001
+  - from: 440000
     to: 45
   - from: 12
     to: 18
