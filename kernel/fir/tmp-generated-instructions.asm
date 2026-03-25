@@ -7,7 +7,7 @@ PE(1,0):
 
 PE(2,0):
 {
-  MUL, [EAST, RED], [$0] -> [WEST, RED] (t=5, inv_iters=1)
+  VMUL, [EAST, RED], [$0] -> [WEST, RED] (t=5, inv_iters=1)
 } (idx_per_ii=0)
 {
   LOAD, [NORTH, RED] -> [$0] (t=3, inv_iters=0)
@@ -31,11 +31,8 @@ PE(1,1):
   DATA_MOV, [NORTH, RED] -> [$0] (t=6, inv_iters=1)
 } (idx_per_ii=1)
 {
-  ADD, [SOUTH, RED], [$0] -> [WEST, RED], [NORTH, RED] (t=7, inv_iters=1)
+  VADD, [SOUTH, RED], [$0] -> [WEST, RED], [NORTH, RED] (t=7, inv_iters=1)
 } (idx_per_ii=2)
-{
-  RETURN_VALUE, [NORTH, RED] (t=9, inv_iters=1)
-} (idx_per_ii=4)
 
 PE(2,1):
 {
@@ -52,7 +49,7 @@ PE(0,2):
   DATA_MOV, [EAST, RED] -> [SOUTH, RED] (t=6, inv_iters=1)
 } (idx_per_ii=1)
 {
-  GRANT_ONCE, [#0] -> [$0] (t=3, inv_iters=0)
+  GRANT_ONCE, [] -> [$0] (t=3, inv_iters=0)
 } (idx_per_ii=3)
 {
   PHI_START, [$0], [SOUTH, RED] -> [EAST, RED] (t=4, inv_iters=0)
@@ -64,10 +61,11 @@ PE(1,2):
   DATA_MOV, [EAST, RED] -> [WEST, RED] (t=5, inv_iters=1)
 } (idx_per_ii=0)
 {
-  GRANT_PREDICATE, [SOUTH, RED], [$0] -> [SOUTH, RED] (t=8, inv_iters=1)
+  GRANT_PREDICATE, [SOUTH, RED], [$0] -> [$0] (t=8, inv_iters=1)
 } (idx_per_ii=3)
 {
   DATA_MOV, [EAST, RED] -> [$0] (t=4, inv_iters=0)
+  VECTOR.REDUCE.ADD, [$0] -> [NORTH, RED] (t=9, inv_iters=1)
 } (idx_per_ii=4)
 
 PE(2,2):
@@ -78,7 +76,7 @@ PE(2,2):
   PHI_START, [EAST, RED], [$0] -> [SOUTH, RED], [EAST, RED], [$0] (t=1, inv_iters=0)
 } (idx_per_ii=1)
 {
-  ADD, [$0], [#1] -> [$0], [$1] (t=2, inv_iters=0)
+  ADD, [$0], [#4] -> [$0], [$1] (t=2, inv_iters=0)
 } (idx_per_ii=2)
 {
   ICMP_EQ, [$0], [#32] -> [$0], [WEST, RED] (t=3, inv_iters=0)
@@ -94,4 +92,9 @@ PE(3,2):
 {
   GEP, [arg2], [WEST, RED] -> [SOUTH, RED] (t=2, inv_iters=0)
 } (idx_per_ii=2)
+
+PE(1,3):
+{
+  RETURN_VALUE, [SOUTH, RED] (t=10, inv_iters=2)
+} (idx_per_ii=0)
 

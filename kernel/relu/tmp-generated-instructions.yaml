@@ -57,7 +57,7 @@ array_config:
             - index_per_ii: 0
               operations:
                 - opcode: "DATA_MOV"
-                  id: 260001
+                  id: 260000
                   time_step: 5
                   invalid_iterations: 1
                   src_operands:
@@ -69,7 +69,7 @@ array_config:
             - index_per_ii: 1
               operations:
                 - opcode: "DATA_MOV"
-                  id: 340001
+                  id: 340000
                   time_step: 6
                   invalid_iterations: 1
                   src_operands:
@@ -121,7 +121,7 @@ array_config:
             - index_per_ii: 1
               operations:
                 - opcode: "DATA_MOV"
-                  id: 130002
+                  id: 130001
                   time_step: 6
                   invalid_iterations: 1
                   src_operands:
@@ -133,7 +133,7 @@ array_config:
             - index_per_ii: 2
               operations:
                 - opcode: "DATA_MOV"
-                  id: 190001
+                  id: 190000
                   time_step: 7
                   invalid_iterations: 1
                   src_operands:
@@ -183,7 +183,7 @@ array_config:
             - index_per_ii: 3
               operations:
                 - opcode: "DATA_MOV"
-                  id: 200001
+                  id: 200000
                   time_step: 3
                   invalid_iterations: 0
                   src_operands:
@@ -271,7 +271,7 @@ array_config:
                     - operand: "NORTH"
                       color: "RED"
                 - opcode: "DATA_MOV"
-                  id: 130001
+                  id: 130000
                   time_step: 5
                   invalid_iterations: 1
                   src_operands:

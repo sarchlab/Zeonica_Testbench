@@ -38,7 +38,7 @@ nodes:
     opcode: "DATA_MOV"
     tile_x: 1
     tile_y: 2
-    time_step: 9
+    time_step: 5
   - id: 18
     opcode: "GRANT_PREDICATE"
     tile_x: 1

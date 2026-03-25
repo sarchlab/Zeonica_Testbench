@@ -113,7 +113,7 @@ nodes:
     opcode: "DATA_MOV"
     tile_x: 2
     tile_y: 1
-    time_step: 9
+    time_step: 7
   - id: 66
     opcode: "GRANT_PREDICATE"
     tile_x: 0
@@ -328,7 +328,7 @@ nodes:
     opcode: "DATA_MOV"
     tile_x: 2
     tile_y: 1
-    time_step: 17
+    time_step: 13
   - id: 147
     opcode: "DATA_MOV"
     tile_x: 0
@@ -383,7 +383,7 @@ nodes:
     opcode: "DATA_MOV"
     tile_x: 1
     tile_y: 2
-    time_step: 21
+    time_step: 16
   - id: 167
     opcode: "DATA_MOV"
     tile_x: 1
@@ -403,32 +403,32 @@ nodes:
     opcode: "DATA_MOV"
     tile_x: 3
     tile_y: 1
-    time_step: 18
+    time_step: 15
   - id: 174
     opcode: "DATA_MOV"
     tile_x: 0
     tile_y: 0
-    time_step: 18
+    time_step: 13
   - id: 175
     opcode: "DATA_MOV"
     tile_x: 2
     tile_y: 2
-    time_step: 19
+    time_step: 14
   - id: 177
     opcode: "DATA_MOV"
     tile_x: 2
     tile_y: 0
-    time_step: 18
+    time_step: 14
   - id: 178
     opcode: "DATA_MOV"
     tile_x: 0
     tile_y: 2
-    time_step: 19
+    time_step: 14
   - id: 179
     opcode: "DATA_MOV"
     tile_x: 2
     tile_y: 1
-    time_step: 22
+    time_step: 15
   - id: 181
     opcode: "ADD"
     tile_x: 1
@@ -558,7 +558,7 @@ nodes:
     opcode: "DATA_MOV"
     tile_x: 1
     tile_y: 2
-    time_step: 19
+    time_step: 17
   - id: 220
     opcode: "DATA_MOV"
     tile_x: 1
@@ -568,12 +568,12 @@ nodes:
     opcode: "DATA_MOV"
     tile_x: 2
     tile_y: 2
-    time_step: 18
+    time_step: 17
   - id: 226
     opcode: "DATA_MOV"
     tile_x: 2
     tile_y: 2
-    time_step: 20
+    time_step: 18
   - id: 227
     opcode: "DATA_MOV"
     tile_x: 1
@@ -623,12 +623,12 @@ nodes:
     opcode: "CTRL_MOV"
     tile_x: 0
     tile_y: 1
-    time_step: 28
+    time_step: 24
   - id: 240
     opcode: "CTRL_MOV"
     tile_x: 1
     tile_y: 1
-    time_step: 23
+    time_step: 21
   - id: 241
     opcode: "CTRL_MOV"
     tile_x: 2
@@ -693,7 +693,7 @@ nodes:
     opcode: "CTRL_MOV"
     tile_x: 0
     tile_y: 1
-    time_step: 27
+    time_step: 22
   - id: 263
     opcode: "CTRL_MOV"
     tile_x: 2
@@ -709,32 +709,32 @@ nodes:
     tile_x: 1
     tile_y: 0
     time_step: 22
-  - id: 510001
+  - id: 510000
     opcode: "DATA_MOV"
     tile_x: 0
     tile_y: 2
     time_step: 5
-  - id: 510002
+  - id: 510001
     opcode: "DATA_MOV"
     tile_x: 1
     tile_y: 2
     time_step: 6
-  - id: 610001
+  - id: 610000
     opcode: "DATA_MOV"
     tile_x: 1
     tile_y: 1
     time_step: 6
-  - id: 880001
+  - id: 880000
     opcode: "DATA_MOV"
     tile_x: 1
     tile_y: 1
     time_step: 10
-  - id: 880002
+  - id: 880001
     opcode: "DATA_MOV"
     tile_x: 1
     tile_y: 0
     time_step: 11
-  - id: 880003
+  - id: 880002
     opcode: "DATA_MOV"
     tile_x: 2
     tile_y: 0
@@ -744,12 +744,12 @@ nodes:
     tile_x: 2
     tile_y: 1
     time_step: 18
-  - id: 1420001
+  - id: 1420000
     opcode: "DATA_MOV"
     tile_x: 1
     tile_y: 0
     time_step: 17
-  - id: 1440001
+  - id: 1440000
     opcode: "DATA_MOV"
     tile_x: 0
     tile_y: 1
@@ -764,32 +764,32 @@ nodes:
     tile_x: 1
     tile_y: 1
     time_step: 11
-  - id: 1490001
+  - id: 1490000
     opcode: "DATA_MOV"
     tile_x: 2
     tile_y: 1
     time_step: 11
-  - id: 1660001
+  - id: 1660000
     opcode: "DATA_MOV"
     tile_x: 1
     tile_y: 1
     time_step: 15
-  - id: 1730001
+  - id: 1730000
     opcode: "DATA_MOV"
     tile_x: 0
     tile_y: 1
     time_step: 12
-  - id: 1730002
+  - id: 1730001
     opcode: "DATA_MOV"
     tile_x: 1
     tile_y: 1
     time_step: 13
-  - id: 1730003
+  - id: 1730002
     opcode: "DATA_MOV"
     tile_x: 2
     tile_y: 1
     time_step: 14
-  - id: 1740001
+  - id: 1740000
     opcode: "DATA_MOV"
     tile_x: 1
     tile_y: 0
@@ -828,18 +828,28 @@ nodes:
     opcode: "DATA_MOV"
     tile_x: 1
     tile_y: 1
+    time_step: 12
+  - id: 1790001
+    opcode: "DATA_MOV"
+    tile_x: 1
+    tile_y: 1
+    time_step: 13
+  - id: 1790002
+    opcode: "DATA_MOV"
+    tile_x: 1
+    tile_y: 1
     time_step: 14
-  - id: 2060001
+  - id: 2060000
     opcode: "DATA_MOV"
     tile_x: 1
     tile_y: 3
     time_step: 15
-  - id: 2060002
+  - id: 2060001
     opcode: "DATA_MOV"
     tile_x: 2
     tile_y: 3
     time_step: 16
-  - id: 2060003
+  - id: 2060002
     opcode: "DATA_MOV"
     tile_x: 2
     tile_y: 2
@@ -849,7 +859,7 @@ nodes:
     tile_x: 0
     tile_y: 2
     time_step: 16
-  - id: 2200001
+  - id: 2200000
     opcode: "DATA_MOV"
     tile_x: 1
     tile_y: 2
@@ -859,22 +869,22 @@ nodes:
     tile_x: 1
     tile_y: 2
     time_step: 16
-  - id: 2260001
+  - id: 2260000
     opcode: "DATA_MOV"
     tile_x: 1
     tile_y: 3
     time_step: 16
-  - id: 2260002
+  - id: 2260001
     opcode: "DATA_MOV"
     tile_x: 2
     tile_y: 3
     time_step: 17
-  - id: 2370001
+  - id: 2370000
     opcode: "CTRL_MOV"
     tile_x: 0
     tile_y: 2
     time_step: 23
-  - id: 2400001
+  - id: 2400000
     opcode: "CTRL_MOV"
     tile_x: 1
     tile_y: 2
@@ -889,7 +899,7 @@ nodes:
     tile_x: 1
     tile_y: 1
     time_step: 20
-  - id: 2620001
+  - id: 2620000
     opcode: "CTRL_MOV"
     tile_x: 0
     tile_y: 2
@@ -1010,29 +1020,29 @@ edges:
   - from: 72
     to: 255
   - from: 46
+    to: 510000
+  - from: 510000
     to: 510001
-  - from: 510001
-    to: 510002
   - from: 55
-    to: 610001
-  - from: 610001
+    to: 610000
+  - from: 610000
     to: 61
   - from: 61
     to: 67
   - from: 80
+    to: 880000
+  - from: 880000
     to: 880001
   - from: 880001
     to: 880002
   - from: 880002
-    to: 880003
-  - from: 880003
     to: 88
   - from: 88
     to: 96
   - from: 140
-    to: 1440001
+    to: 1440000
   - from: 138
-    to: 1420001
+    to: 1420000
   - from: 119
     to: 1280000
   - from: 1280000
@@ -1042,6 +1052,10 @@ edges:
   - from: 159
     to: 1790000
   - from: 1790000
+    to: 1790001
+  - from: 1790001
+    to: 1790002
+  - from: 1790002
     to: 179
   - from: 179
     to: 189
@@ -1070,23 +1084,23 @@ edges:
   - from: 175
     to: 185
   - from: 159
-    to: 1740001
-  - from: 1740001
+    to: 1740000
+  - from: 1740000
     to: 174
   - from: 174
     to: 184
   - from: 159
+    to: 1730000
+  - from: 1730000
     to: 1730001
   - from: 1730001
     to: 1730002
   - from: 1730002
-    to: 1730003
-  - from: 1730003
     to: 173
   - from: 173
     to: 183
   - from: 141
-    to: 1490001
+    to: 1490000
   - from: 141
     to: 1480000
   - from: 1480000
@@ -1100,10 +1114,10 @@ edges:
   - from: 146
     to: 154
   - from: 215
+    to: 2260000
+  - from: 2260000
     to: 2260001
   - from: 2260001
-    to: 2260002
-  - from: 2260002
     to: 226
   - from: 226
     to: 233
@@ -1114,32 +1128,32 @@ edges:
   - from: 225
     to: 232
   - from: 232
-    to: 2400001
-  - from: 2400001
+    to: 2400000
+  - from: 2400000
     to: 240
   - from: 155
-    to: 1660001
-  - from: 1660001
+    to: 1660000
+  - from: 1660000
     to: 166
   - from: 166
     to: 229
   - from: 229
-    to: 2370001
-  - from: 2370001
+    to: 2370000
+  - from: 2370000
     to: 237
   - from: 203
+    to: 2060000
+  - from: 2060000
     to: 2060001
   - from: 2060001
     to: 2060002
   - from: 2060002
-    to: 2060003
-  - from: 2060003
     to: 206
   - from: 206
     to: 212
   - from: 213
-    to: 2200001
-  - from: 2200001
+    to: 2200000
+  - from: 2200000
     to: 220
   - from: 220
     to: 243
@@ -1158,8 +1172,8 @@ edges:
   - from: 219
     to: 256
   - from: 256
-    to: 2620001
-  - from: 2620001
+    to: 2620000
+  - from: 2620000
     to: 262
   - from: 260
     to: 67
@@ -1215,11 +1229,11 @@ edges:
     to: 159
   - from: 141
     to: 158
-  - from: 1490001
+  - from: 1490000
     to: 157
   - from: 141
     to: 153
-  - from: 1440001
+  - from: 1440000
     to: 152
   - from: 68
     to: 81
@@ -1247,7 +1261,7 @@ edges:
     to: 70
   - from: 56
     to: 69
-  - from: 510002
+  - from: 510001
     to: 57
   - from: 46
     to: 56
@@ -1367,7 +1381,7 @@ edges:
     to: 140
   - from: 121
     to: 153
-  - from: 1420001
+  - from: 1420000
     to: 152
   - from: 139
     to: 181

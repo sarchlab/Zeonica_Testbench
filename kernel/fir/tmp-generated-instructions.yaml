@@ -12,7 +12,7 @@ array_config:
             - index_per_ii: 1
               operations:
                 - opcode: "DATA_MOV"
-                  id: 310001
+                  id: 310000
                   time_step: 6
                   invalid_iterations: 1
                   src_operands:
@@ -29,7 +29,7 @@ array_config:
           instructions:
             - index_per_ii: 0
               operations:
-                - opcode: "MUL"
+                - opcode: "VMUL"
                   id: 28
                   time_step: 5
                   invalid_iterations: 1
@@ -123,7 +123,7 @@ array_config:
                       color: "RED"
             - index_per_ii: 2
               operations:
-                - opcode: "ADD"
+                - opcode: "VADD"
                   id: 33
                   time_step: 7
                   invalid_iterations: 1
@@ -135,15 +135,6 @@ array_config:
                   dst_operands:
                     - operand: "WEST"
                       color: "RED"
-                    - operand: "NORTH"
-                      color: "RED"
-            - index_per_ii: 4
-              operations:
-                - opcode: "RETURN_VALUE"
-                  id: 41
-                  time_step: 9
-                  invalid_iterations: 1
-                  src_operands:
                     - operand: "NORTH"
                       color: "RED"
     - column: 2
@@ -175,7 +166,7 @@ array_config:
             - index_per_ii: 3
               operations:
                 - opcode: "DATA_MOV"
-                  id: 180001
+                  id: 180000
                   time_step: 3
                   invalid_iterations: 0
                   src_operands:
@@ -193,7 +184,7 @@ array_config:
             - index_per_ii: 1
               operations:
                 - opcode: "DATA_MOV"
-                  id: 290002
+                  id: 290001
                   time_step: 6
                   invalid_iterations: 1
                   src_operands:
@@ -209,7 +200,7 @@ array_config:
                   time_step: 3
                   invalid_iterations: 0
                   src_operands:
-                    - operand: "#0"
+                    - operand: ""
                       color: "RED"
                   dst_operands:
                     - operand: "$0"
@@ -237,7 +228,7 @@ array_config:
             - index_per_ii: 0
               operations:
                 - opcode: "DATA_MOV"
-                  id: 120001
+                  id: 120000
                   time_step: 5
                   invalid_iterations: 1
                   src_operands:
@@ -247,7 +238,7 @@ array_config:
                     - operand: "SOUTH"
                       color: "RED"
                 - opcode: "DATA_MOV"
-                  id: 290001
+                  id: 290000
                   time_step: 5
                   invalid_iterations: 1
                   src_operands:
@@ -268,7 +259,7 @@ array_config:
                     - operand: "$0"
                       color: "RED"
                   dst_operands:
-                    - operand: "SOUTH"
+                    - operand: "$0"
                       color: "RED"
             - index_per_ii: 4
               operations:
@@ -281,6 +272,16 @@ array_config:
                       color: "RED"
                   dst_operands:
                     - operand: "$0"
+                      color: "RED"
+                - opcode: "VECTOR.REDUCE.ADD"
+                  id: 41
+                  time_step: 9
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "$0"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "NORTH"
                       color: "RED"
     - column: 2
       row: 2
@@ -329,7 +330,7 @@ array_config:
                   src_operands:
                     - operand: "$0"
                       color: "RED"
-                    - operand: "#1"
+                    - operand: "#4"
                       color: "RED"
                   dst_operands:
                     - operand: "$0"
@@ -396,5 +397,20 @@ array_config:
                     - operand: "WEST"
                       color: "RED"
                   dst_operands:
+                    - operand: "SOUTH"
+                      color: "RED"
+    - column: 1
+      row: 3
+      core_id: "13"
+      entries:
+        - entry_id: "entry0"
+          instructions:
+            - index_per_ii: 0
+              operations:
+                - opcode: "RETURN_VALUE"
+                  id: 43
+                  time_step: 10
+                  invalid_iterations: 2
+                  src_operands:
                     - operand: "SOUTH"
                       color: "RED"

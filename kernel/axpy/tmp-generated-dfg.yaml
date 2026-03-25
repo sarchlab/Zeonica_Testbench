@@ -84,32 +84,32 @@ nodes:
     tile_x: 0
     tile_y: 0
     time_step: 9
-  - id: 130001
+  - id: 130000
     opcode: "DATA_MOV"
     tile_x: 2
     tile_y: 2
     time_step: 4
-  - id: 130002
+  - id: 130001
     opcode: "DATA_MOV"
     tile_x: 2
     tile_y: 1
     time_step: 5
-  - id: 130003
+  - id: 130002
     opcode: "DATA_MOV"
     tile_x: 1
     tile_y: 1
     time_step: 6
-  - id: 130004
+  - id: 130003
     opcode: "DATA_MOV"
     tile_x: 0
     tile_y: 1
     time_step: 8
-  - id: 140001
+  - id: 140000
     opcode: "DATA_MOV"
     tile_x: 1
     tile_y: 3
     time_step: 4
-  - id: 150001
+  - id: 150000
     opcode: "DATA_MOV"
     tile_x: 3
     tile_y: 1
@@ -119,22 +119,22 @@ nodes:
     tile_x: 2
     tile_y: 2
     time_step: 4
-  - id: 220001
+  - id: 220000
     opcode: "DATA_MOV"
     tile_x: 0
     tile_y: 2
     time_step: 6
-  - id: 220002
+  - id: 220001
     opcode: "DATA_MOV"
     tile_x: 0
     tile_y: 1
     time_step: 7
-  - id: 290001
+  - id: 290000
     opcode: "DATA_MOV"
     tile_x: 2
     tile_y: 0
     time_step: 6
-  - id: 290002
+  - id: 290001
     opcode: "DATA_MOV"
     tile_x: 1
     tile_y: 0
@@ -149,30 +149,30 @@ edges:
   - from: 19
     to: 24
   - from: 10
-    to: 150001
+    to: 150000
   - from: 9
-    to: 140001
+    to: 140000
   - from: 26
+    to: 290000
+  - from: 290000
     to: 290001
-  - from: 290001
-    to: 290002
   - from: 17
+    to: 220000
+  - from: 220000
     to: 220001
-  - from: 220001
-    to: 220002
   - from: 9
+    to: 130000
+  - from: 130000
     to: 130001
   - from: 130001
     to: 130002
   - from: 130002
     to: 130003
-  - from: 130003
-    to: 130004
   - from: 16
     to: 200000
   - from: 31
     to: 4
-  - from: 290002
+  - from: 290001
     to: 32
   - from: 25
     to: 31
@@ -190,17 +190,17 @@ edges:
     to: 31
   - from: 8
     to: 16
-  - from: 130004
+  - from: 130003
     to: 35
-  - from: 140001
+  - from: 140000
     to: 17
   - from: 24
     to: 30
-  - from: 150001
+  - from: 150000
     to: 18
   - from: 16
     to: 25
-  - from: 220002
+  - from: 220001
     to: 32
   - from: 18
     to: 26
