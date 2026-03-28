@@ -8,7 +8,6 @@ digraph DFG {
   n12 [label="ICMP_EQ\nID=12\n(1,1) t=3", fillcolor=white];
   n13 [label="LOAD\nID=13\n(1,0) t=3", fillcolor=white];
   n14 [label="DATA_MOV\nID=14\n(1,2) t=9", fillcolor=lightgreen];
-  n15 [label="DATA_MOV\nID=15\n(1,2) t=5", fillcolor=lightgreen];
   n18 [label="GRANT_PREDICATE\nID=18\n(1,2) t=10", fillcolor=white];
   n19 [label="NOT\nID=19\n(1,1) t=4", fillcolor=white];
   n20 [label="MUL\nID=20\n(1,0) t=4", fillcolor=white];
@@ -22,15 +21,12 @@ digraph DFG {
   n36 [label="LOAD\nID=36\n(0,1) t=9", fillcolor=white];
   n38 [label="ADD\nID=38\n(0,1) t=10", fillcolor=white];
   n40 [label="STORE\nID=40\n(0,1) t=11", fillcolor=white];
-  n150000 [label="DATA_MOV\nID=150000\n(1,1) t=4", fillcolor=lightgreen];
   n27 -> n4;
   n25 -> n27;
   n12 -> n14;
   n14 -> n18;
-  n12 -> n150000;
-  n150000 -> n15;
-  n15 -> n18;
   n36 -> n38;
+  n29 -> n31;
   n31 -> n33;
   n0 -> n4;
   n12 -> n19;
@@ -44,8 +40,8 @@ digraph DFG {
   n7 -> n12;
   n20 -> n26;
   n8 -> n13;
-  n13 -> n20;
-  n29 -> n31;
-  n18 -> n24;
+  n12 -> n18;
   n26 -> n29;
+  n13 -> n20;
+  n18 -> n24;
 }

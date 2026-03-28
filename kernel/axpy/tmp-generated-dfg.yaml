@@ -84,22 +84,22 @@ nodes:
     tile_x: 0
     tile_y: 0
     time_step: 9
-  - id: 130000
-    opcode: "DATA_MOV"
-    tile_x: 2
-    tile_y: 2
-    time_step: 4
   - id: 130001
     opcode: "DATA_MOV"
-    tile_x: 2
-    tile_y: 1
+    tile_x: 0
+    tile_y: 3
     time_step: 5
   - id: 130002
     opcode: "DATA_MOV"
-    tile_x: 1
-    tile_y: 1
+    tile_x: 0
+    tile_y: 3
     time_step: 6
   - id: 130003
+    opcode: "DATA_MOV"
+    tile_x: 0
+    tile_y: 2
+    time_step: 7
+  - id: 130004
     opcode: "DATA_MOV"
     tile_x: 0
     tile_y: 1
@@ -114,11 +114,6 @@ nodes:
     tile_x: 3
     tile_y: 1
     time_step: 3
-  - id: 200000
-    opcode: "DATA_MOV"
-    tile_x: 2
-    tile_y: 2
-    time_step: 4
   - id: 220000
     opcode: "DATA_MOV"
     tile_x: 0
@@ -160,16 +155,12 @@ edges:
     to: 220000
   - from: 220000
     to: 220001
-  - from: 9
-    to: 130000
-  - from: 130000
-    to: 130001
   - from: 130001
     to: 130002
   - from: 130002
     to: 130003
-  - from: 16
-    to: 200000
+  - from: 130003
+    to: 130004
   - from: 31
     to: 4
   - from: 290001
@@ -184,13 +175,13 @@ edges:
     to: 8
   - from: 4
     to: 10
-  - from: 200000
+  - from: 16
     to: 24
   - from: 8
     to: 31
   - from: 8
     to: 16
-  - from: 130003
+  - from: 130004
     to: 35
   - from: 140000
     to: 17
@@ -200,6 +191,8 @@ edges:
     to: 18
   - from: 16
     to: 25
+  - from: 9
+    to: 130001
   - from: 220001
     to: 32
   - from: 18

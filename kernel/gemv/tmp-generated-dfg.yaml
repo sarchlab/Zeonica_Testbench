@@ -33,7 +33,7 @@ nodes:
     opcode: "DATA_MOV"
     tile_x: 1
     tile_y: 1
-    time_step: 4
+    time_step: 7
   - id: 20
     opcode: "DATA_MOV"
     tile_x: 0
@@ -118,7 +118,7 @@ nodes:
     opcode: "DATA_MOV"
     tile_x: 2
     tile_y: 1
-    time_step: 7
+    time_step: 9
   - id: 58
     opcode: "DATA_MOV"
     tile_x: 1
@@ -163,12 +163,17 @@ nodes:
     opcode: "DATA_MOV"
     tile_x: 1
     tile_y: 1
+    time_step: 10
+  - id: 70
+    opcode: "DATA_MOV"
+    tile_x: 0
+    tile_y: 1
     time_step: 8
   - id: 71
     opcode: "DATA_MOV"
     tile_x: 0
     tile_y: 1
-    time_step: 10
+    time_step: 8
   - id: 75
     opcode: "ADD"
     tile_x: 0
@@ -289,51 +294,11 @@ nodes:
     tile_x: 2
     tile_y: 0
     time_step: 11
-  - id: 190000
-    opcode: "DATA_MOV"
-    tile_x: 1
-    tile_y: 0
-    time_step: 3
-  - id: 530000
-    opcode: "DATA_MOV"
-    tile_x: 1
-    tile_y: 1
-    time_step: 6
-  - id: 690000
-    opcode: "DATA_MOV"
-    tile_x: 2
-    tile_y: 1
-    time_step: 7
-  - id: 700000
-    opcode: "DATA_MOV"
-    tile_x: 3
-    tile_y: 1
-    time_step: 7
-  - id: 700001
-    opcode: "DATA_MOV"
-    tile_x: 2
-    tile_y: 1
-    time_step: 8
-  - id: 700002
-    opcode: "DATA_MOV"
-    tile_x: 1
-    tile_y: 1
-    time_step: 9
   - id: 710000
     opcode: "DATA_MOV"
-    tile_x: 2
-    tile_y: 0
-    time_step: 7
-  - id: 710001
-    opcode: "DATA_MOV"
     tile_x: 1
-    tile_y: 0
-    time_step: 8
-  - id: 710002
-    opcode: "DATA_MOV"
-    tile_x: 0
-    tile_y: 0
-    time_step: 9
+    tile_y: 1
+    time_step: 7
   - id: 830000
     opcode: "DATA_MOV"
     tile_x: 1
@@ -353,6 +318,10 @@ edges:
     to: 15
   - from: 115
     to: 16
+  - from: 15
+    to: 19
+  - from: 19
+    to: 25
   - from: 16
     to: 20
   - from: 20
@@ -374,9 +343,17 @@ edges:
   - from: 112
     to: 117
   - from: 62
+    to: 69
+  - from: 69
+    to: 78
+  - from: 62
     to: 68
   - from: 68
     to: 77
+  - from: 48
+    to: 53
+  - from: 53
+    to: 111
   - from: 48
     to: 51
   - from: 51
@@ -389,40 +366,14 @@ edges:
     to: 115
   - from: 108
     to: 113
-  - from: 15
-    to: 190000
-  - from: 190000
-    to: 19
-  - from: 19
-    to: 25
   - from: 62
     to: 710000
   - from: 710000
-    to: 710001
-  - from: 710001
-    to: 710002
-  - from: 710002
     to: 71
   - from: 71
     to: 80
-  - from: 62
-    to: 700000
-  - from: 700000
-    to: 700001
-  - from: 700001
-    to: 700002
-  - from: 62
-    to: 690000
-  - from: 690000
-    to: 69
-  - from: 69
-    to: 78
-  - from: 48
-    to: 530000
-  - from: 530000
-    to: 53
-  - from: 53
-    to: 111
+  - from: 70
+    to: 79
   - from: 76
     to: 850000
   - from: 75
@@ -431,6 +382,8 @@ edges:
     to: 83
   - from: 83
     to: 110
+  - from: 62
+    to: 70
   - from: 99
     to: 108
   - from: 98
@@ -494,10 +447,6 @@ edges:
   - from: 43
     to: 50
   - from: 62
-    to: 81
-  - from: 1
-    to: 17
-  - from: 62
     to: 112
   - from: 0
     to: 16
@@ -508,6 +457,10 @@ edges:
   - from: 99
     to: 109
   - from: 41
+    to: 81
+  - from: 1
+    to: 17
+  - from: 62
     to: 81
   - from: 99
     to: 110
@@ -529,5 +482,3 @@ edges:
     to: 118
   - from: 50
     to: 80
-  - from: 700002
-    to: 79

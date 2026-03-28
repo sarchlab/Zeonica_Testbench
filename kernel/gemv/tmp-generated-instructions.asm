@@ -3,10 +3,10 @@
 PE(0,0):
 {
   GRANT_ONCE, [#0] -> [EAST, RED], [$0] (t=0, inv_iters=0)
-  CTRL_MOV, [EAST, RED] -> [$1] (t=11, inv_iters=1)
+  CTRL_MOV, [EAST, RED] -> [$8] (t=11, inv_iters=1)
 } (idx_per_ii=0)
 {
-  PHI_START, [$0], [$1] -> [$0], [NORTH, RED] (t=1, inv_iters=0)
+  PHI_START, [$0], [$8] -> [$0], [NORTH, RED] (t=1, inv_iters=0)
 } (idx_per_ii=1)
 {
   SHL, [$0], [#4] -> [$0] (t=2, inv_iters=0)
@@ -19,7 +19,6 @@ PE(0,0):
 } (idx_per_ii=7)
 {
   GEP, [arg2], [$0] -> [EAST, RED] (t=9, inv_iters=0)
-  DATA_MOV, [EAST, RED] -> [NORTH, RED] (t=9, inv_iters=0)
 } (idx_per_ii=9)
 
 PE(1,0):
@@ -27,17 +26,11 @@ PE(1,0):
   DATA_MOV, [WEST, RED] -> [$0] (t=1, inv_iters=0)
 } (idx_per_ii=1)
 {
-  PHI_START, [$0], [NORTH, RED] -> [$0], [NORTH, RED] (t=2, inv_iters=0)
+  PHI_START, [$0], [NORTH, RED] -> [NORTH, RED] (t=2, inv_iters=0)
 } (idx_per_ii=2)
-{
-  DATA_MOV, [$0] -> [NORTH, RED] (t=3, inv_iters=0)
-} (idx_per_ii=3)
 {
   LOAD, [NORTH, RED] -> [EAST, RED] (t=7, inv_iters=0)
 } (idx_per_ii=7)
-{
-  DATA_MOV, [EAST, RED] -> [WEST, RED] (t=8, inv_iters=0)
-} (idx_per_ii=8)
 {
   DATA_MOV, [NORTH, RED] -> [$0] (t=9, inv_iters=0)
 } (idx_per_ii=9)
@@ -54,24 +47,21 @@ PE(2,0):
   LOAD, [NORTH, RED] -> [$0] (t=6, inv_iters=0)
 } (idx_per_ii=6)
 {
-  DATA_MOV, [NORTH, RED] -> [WEST, RED] (t=7, inv_iters=0)
-} (idx_per_ii=7)
-{
   MUL, [$0], [WEST, RED] -> [NORTH, RED] (t=8, inv_iters=0)
 } (idx_per_ii=8)
 
 PE(0,1):
 {
-  GRANT_PREDICATE, [$3], [$0] -> [$2] (t=11, inv_iters=1)
+  GRANT_PREDICATE, [$1], [$9] -> [$1] (t=11, inv_iters=1)
 } (idx_per_ii=0)
 {
   DATA_MOV, [SOUTH, RED] -> [$0] (t=2, inv_iters=0)
 } (idx_per_ii=2)
 {
-  PHI_START, [SOUTH, RED], [$2] -> [EAST, RED], [$3] (t=4, inv_iters=0)
+  PHI_START, [SOUTH, RED], [$1] -> [EAST, RED], [$1] (t=4, inv_iters=0)
 } (idx_per_ii=4)
 {
-  PHI_START, [$0], [$1] -> [$2], [$0] (t=5, inv_iters=0)
+  PHI_START, [$0], [$8] -> [$8], [$0] (t=5, inv_iters=0)
 } (idx_per_ii=5)
 {
   GRANT_PREDICATE, [$0], [EAST, RED] -> [SOUTH, RED], [$0] (t=6, inv_iters=0)
@@ -80,57 +70,57 @@ PE(0,1):
   ADD, [$0], [#1] -> [$0], [EAST, RED] (t=7, inv_iters=0)
 } (idx_per_ii=7)
 {
-  ICMP_EQ, [$0], [#4] -> [EAST, RED], [$0], [$1] (t=8, inv_iters=0)
+  ICMP_EQ, [$0], [#4] -> [EAST, RED], [$0] (t=8, inv_iters=0)
+  DATA_MOV, [EAST, RED] -> [$9] (t=8, inv_iters=0)
+  DATA_MOV, [EAST, RED] -> [$16] (t=8, inv_iters=0)
 } (idx_per_ii=8)
 {
-  GRANT_PREDICATE, [$0], [$1] -> [NORTH, RED] (t=9, inv_iters=0)
+  GRANT_PREDICATE, [$0], [$0] -> [NORTH, RED] (t=9, inv_iters=0)
 } (idx_per_ii=9)
 {
-  GRANT_PREDICATE, [$2], [EAST, RED] -> [$1] (t=10, inv_iters=0)
-  DATA_MOV, [SOUTH, RED] -> [$0] (t=10, inv_iters=0)
+  GRANT_PREDICATE, [$8], [$16] -> [$8] (t=10, inv_iters=0)
 } (idx_per_ii=10)
 
 PE(1,1):
 {
-  GRANT_PREDICATE, [$2], [$3] -> [$6] (t=11, inv_iters=1)
+  GRANT_PREDICATE, [$1], [$8] -> [$1] (t=11, inv_iters=1)
 } (idx_per_ii=0)
 {
-  GRANT_PREDICATE, [$1], [$5] -> [SOUTH, RED] (t=12, inv_iters=1)
+  GRANT_PREDICATE, [$2], [$9] -> [SOUTH, RED] (t=12, inv_iters=1)
 } (idx_per_ii=1)
 {
-  PHI_START, [SOUTH, RED], [$0] -> [$1], [EAST, RED], [$0] (t=3, inv_iters=0)
+  PHI_START, [SOUTH, RED], [$0] -> [$8], [EAST, RED], [$0] (t=3, inv_iters=0)
+  DATA_MOV, [SOUTH, RED] -> [$16] (t=3, inv_iters=0)
 } (idx_per_ii=3)
 {
-  ADD, [$0], [#1] -> [$0], [$2] (t=4, inv_iters=0)
-  DATA_MOV, [SOUTH, RED] -> [$3] (t=4, inv_iters=0)
+  ADD, [$0], [#1] -> [$0], [$9] (t=4, inv_iters=0)
 } (idx_per_ii=4)
 {
-  ICMP_EQ, [$0], [#4] -> [EAST, RED], [WEST, RED], [$5], [$4], [NORTH, RED] (t=5, inv_iters=0)
+  ICMP_EQ, [$0], [#4] -> [EAST, RED], [WEST, RED], [$10], [NORTH, RED] (t=5, inv_iters=0)
   DATA_MOV, [WEST, RED] -> [$0] (t=5, inv_iters=0)
 } (idx_per_ii=5)
 {
-  GEP, [$0], [$1] -> [SOUTH, RED] (t=6, inv_iters=0)
-  DATA_MOV, [$5] -> [EAST, RED] (t=6, inv_iters=0)
+  GEP, [$0], [$8] -> [SOUTH, RED] (t=6, inv_iters=0)
 } (idx_per_ii=6)
 {
-  GRANT_PREDICATE, [$2], [EAST, RED] -> [$0] (t=7, inv_iters=0)
+  GRANT_PREDICATE, [$9], [EAST, RED] -> [$0] (t=7, inv_iters=0)
+  DATA_MOV, [EAST, RED] -> [WEST, RED] (t=7, inv_iters=0)
+  DATA_MOV, [EAST, RED] -> [$8] (t=7, inv_iters=0)
 } (idx_per_ii=7)
 {
-  PHI_START, [$3], [$6] -> [$2], [$1] (t=8, inv_iters=0)
-  DATA_MOV, [EAST, RED] -> [$3] (t=8, inv_iters=0)
+  PHI_START, [$16], [$1] -> [$1] (t=8, inv_iters=0)
   DATA_MOV, [WEST, RED] -> [SOUTH, RED] (t=8, inv_iters=0)
 } (idx_per_ii=8)
 {
-  NOT, [WEST, RED] -> [SOUTH, RED], [$5], [NORTH, RED] (t=9, inv_iters=0)
-  DATA_MOV, [EAST, RED] -> [WEST, RED] (t=9, inv_iters=0)
+  NOT, [WEST, RED] -> [SOUTH, RED], [$9], [NORTH, RED] (t=9, inv_iters=0)
 } (idx_per_ii=9)
 {
-  GRANT_PREDICATE, [$1], [$4] -> [$1] (t=10, inv_iters=0)
+  GRANT_PREDICATE, [$1], [$10] -> [$2] (t=10, inv_iters=0)
 } (idx_per_ii=10)
 
 PE(2,1):
 {
-  GRANT_PREDICATE, [$2], [$3] -> [NORTH, RED] (t=11, inv_iters=1)
+  GRANT_PREDICATE, [$0], [$16] -> [NORTH, RED] (t=11, inv_iters=1)
 } (idx_per_ii=0)
 {
   DATA_MOV, [WEST, RED] -> [$0] (t=4, inv_iters=0)
@@ -139,27 +129,18 @@ PE(2,1):
   GEP, [arg1], [$0] -> [SOUTH, RED] (t=5, inv_iters=0)
 } (idx_per_ii=5)
 {
-  NOT, [WEST, RED] -> [WEST, RED], [$3], [SOUTH, RED], [EAST, RED], [$0], [NORTH, RED] (t=6, inv_iters=0)
+  NOT, [WEST, RED] -> [WEST, RED], [$16], [NORTH, RED] (t=6, inv_iters=0)
+  DATA_MOV, [WEST, RED] -> [$8] (t=6, inv_iters=0)
 } (idx_per_ii=6)
 {
-  DATA_MOV, [$0] -> [WEST, RED] (t=7, inv_iters=0)
-  DATA_MOV, [WEST, RED] -> [$1] (t=7, inv_iters=0)
-} (idx_per_ii=7)
-{
   DATA_MOV, [NORTH, RED] -> [$0] (t=8, inv_iters=0)
-  DATA_MOV, [EAST, RED] -> [WEST, RED] (t=8, inv_iters=0)
 } (idx_per_ii=8)
 {
-  ADD, [SOUTH, RED], [$0] -> [$2], [$0] (t=9, inv_iters=0)
+  ADD, [SOUTH, RED], [$0] -> [$0] (t=9, inv_iters=0)
 } (idx_per_ii=9)
 {
-  GRANT_PREDICATE, [$0], [$1] -> [SOUTH, RED] (t=10, inv_iters=0)
+  GRANT_PREDICATE, [$0], [$8] -> [SOUTH, RED] (t=10, inv_iters=0)
 } (idx_per_ii=10)
-
-PE(3,1):
-{
-  DATA_MOV, [WEST, RED] -> [WEST, RED] (t=7, inv_iters=0)
-} (idx_per_ii=7)
 
 PE(0,2):
 {
@@ -179,25 +160,25 @@ PE(1,2):
 
 PE(2,2):
 {
-  CTRL_MOV, [WEST, RED] -> [$1] (t=11, inv_iters=1)
+  CTRL_MOV, [WEST, RED] -> [$8] (t=11, inv_iters=1)
 } (idx_per_ii=0)
 {
-  CTRL_MOV, [SOUTH, RED] -> [$2] (t=12, inv_iters=1)
+  CTRL_MOV, [SOUTH, RED] -> [$10] (t=12, inv_iters=1)
 } (idx_per_ii=1)
 {
   GRANT_ONCE, [#0] -> [$0] (t=5, inv_iters=0)
 } (idx_per_ii=5)
 {
-  PHI_START, [$0], [$1] -> [$1], [$0] (t=6, inv_iters=0)
+  PHI_START, [$0], [$8] -> [$0] (t=6, inv_iters=0)
 } (idx_per_ii=6)
 {
-  PHI_START, [$0], [$2] -> [SOUTH, RED] (t=7, inv_iters=0)
-  DATA_MOV, [SOUTH, RED] -> [$2] (t=7, inv_iters=0)
+  PHI_START, [$0], [$10] -> [SOUTH, RED] (t=7, inv_iters=0)
+  DATA_MOV, [SOUTH, RED] -> [$8] (t=7, inv_iters=0)
 } (idx_per_ii=7)
 {
-  PHI_START, [$1], [$3] -> [$0], [WEST, RED] (t=8, inv_iters=0)
+  PHI_START, [$0], [$9] -> [$0], [WEST, RED] (t=8, inv_iters=0)
 } (idx_per_ii=8)
 {
-  GRANT_PREDICATE, [$0], [$2] -> [$3] (t=10, inv_iters=0)
+  GRANT_PREDICATE, [$0], [$8] -> [$9] (t=10, inv_iters=0)
 } (idx_per_ii=10)
 
