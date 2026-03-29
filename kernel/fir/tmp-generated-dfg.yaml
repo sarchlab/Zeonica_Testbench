@@ -65,7 +65,7 @@ nodes:
     tile_y: 2
     time_step: 4
   - id: 28
-    opcode: "VMUL"
+    opcode: "MUL"
     tile_x: 2
     tile_y: 0
     time_step: 5
@@ -80,7 +80,7 @@ nodes:
     tile_y: 2
     time_step: 5
   - id: 33
-    opcode: "VADD"
+    opcode: "ADD"
     tile_x: 1
     tile_y: 1
     time_step: 7
@@ -95,15 +95,10 @@ nodes:
     tile_y: 1
     time_step: 8
   - id: 41
-    opcode: "VECTOR.REDUCE.ADD"
-    tile_x: 1
-    tile_y: 2
-    time_step: 9
-  - id: 43
     opcode: "RETURN_VALUE"
     tile_x: 1
-    tile_y: 3
-    time_step: 10
+    tile_y: 1
+    time_step: 9
   - id: 120000
     opcode: "DATA_MOV"
     tile_x: 1
@@ -152,8 +147,6 @@ edges:
     to: 29
   - from: 29
     to: 38
-  - from: 41
-    to: 43
   - from: 33
     to: 38
   - from: 310000

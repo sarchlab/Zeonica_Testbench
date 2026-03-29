@@ -82,7 +82,7 @@ array_config:
                     - operand: "NORTH"
                       color: "RED"
                   dst_operands:
-                    - operand: "$1"
+                    - operand: "$8"
                       color: "RED"
             - index_per_ii: 3
               operations:
@@ -93,7 +93,7 @@ array_config:
                   src_operands:
                     - operand: "$0"
                       color: "RED"
-                    - operand: "$1"
+                    - operand: "$8"
                       color: "RED"
                   dst_operands:
                     - operand: "WEST"
@@ -196,6 +196,16 @@ array_config:
                   dst_operands:
                     - operand: "SOUTH"
                       color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 30
+                  time_step: 5
+                  invalid_iterations: 1
+                  src_operands:
+                    - operand: "NORTH"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$8"
+                      color: "RED"
             - index_per_ii: 1
               operations:
                 - opcode: "GEP"
@@ -205,9 +215,9 @@ array_config:
                   src_operands:
                     - operand: "arg6"
                       color: "RED"
-                    - operand: "$1"
+                    - operand: "$0"
                       color: "RED"
-                    - operand: "NORTH"
+                    - operand: "$8"
                       color: "RED"
                   dst_operands:
                     - operand: "SOUTH"
@@ -236,8 +246,6 @@ array_config:
                     - operand: "$0"
                       color: "RED"
                   dst_operands:
-                    - operand: "$1"
-                      color: "RED"
                     - operand: "$0"
                       color: "RED"
     - column: 1
@@ -260,6 +268,16 @@ array_config:
                       color: "RED"
             - index_per_ii: 2
               operations:
+                - opcode: "DATA_MOV"
+                  id: 5
+                  time_step: 2
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "$0"
+                      color: "RED"
                 - opcode: "PHI_START"
                   id: 7
                   time_step: 7
@@ -271,18 +289,6 @@ array_config:
                       color: "RED"
                   dst_operands:
                     - operand: "EAST"
-                      color: "RED"
-            - index_per_ii: 3
-              operations:
-                - opcode: "DATA_MOV"
-                  id: 5
-                  time_step: 3
-                  invalid_iterations: 0
-                  src_operands:
-                    - operand: "EAST"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "$0"
                       color: "RED"
             - index_per_ii: 4
               operations:
@@ -309,7 +315,7 @@ array_config:
                   time_step: 5
                   invalid_iterations: 1
                   src_operands:
-                    - operand: "$1"
+                    - operand: "$8"
                       color: "RED"
                     - operand: "$0"
                       color: "RED"
@@ -342,6 +348,16 @@ array_config:
                       color: "RED"
                     - operand: "$0"
                       color: "RED"
+                - opcode: "DATA_MOV"
+                  id: 50000
+                  time_step: 1
+                  invalid_iterations: 0
+                  src_operands:
+                    - operand: "EAST"
+                      color: "RED"
+                  dst_operands:
+                    - operand: "WEST"
+                      color: "RED"
             - index_per_ii: 2
               operations:
                 - opcode: "ADD"
@@ -356,17 +372,7 @@ array_config:
                   dst_operands:
                     - operand: "$0"
                       color: "RED"
-                    - operand: "$1"
-                      color: "RED"
-                - opcode: "DATA_MOV"
-                  id: 50001
-                  time_step: 2
-                  invalid_iterations: 0
-                  src_operands:
-                    - operand: "EAST"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "WEST"
+                    - operand: "$8"
                       color: "RED"
             - index_per_ii: 3
               operations:
@@ -426,30 +432,6 @@ array_config:
                   dst_operands:
                     - operand: "WEST"
                       color: "RED"
-                    - operand: "$0"
-                      color: "RED"
-                - opcode: "DATA_MOV"
-                  id: 300000
-                  time_step: 5
-                  invalid_iterations: 1
-                  src_operands:
-                    - operand: "$0"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "SOUTH"
-                      color: "RED"
-            - index_per_ii: 1
-              operations:
-                - opcode: "DATA_MOV"
-                  id: 50000
-                  time_step: 1
-                  invalid_iterations: 0
-                  src_operands:
-                    - operand: "$0"
-                      color: "RED"
-                  dst_operands:
-                    - operand: "WEST"
-                      color: "RED"
             - index_per_ii: 2
               operations:
                 - opcode: "CAST_TRUNC"
@@ -488,7 +470,5 @@ array_config:
                     - operand: "$0"
                       color: "RED"
                   dst_operands:
-                    - operand: "$0"
-                      color: "RED"
                     - operand: "SOUTH"
                       color: "RED"

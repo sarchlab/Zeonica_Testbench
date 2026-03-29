@@ -34,11 +34,6 @@ nodes:
     tile_x: 1
     tile_y: 2
     time_step: 9
-  - id: 15
-    opcode: "DATA_MOV"
-    tile_x: 1
-    tile_y: 2
-    time_step: 5
   - id: 18
     opcode: "GRANT_PREDICATE"
     tile_x: 1
@@ -104,11 +99,6 @@ nodes:
     tile_x: 0
     tile_y: 1
     time_step: 11
-  - id: 150000
-    opcode: "DATA_MOV"
-    tile_x: 1
-    tile_y: 1
-    time_step: 4
 edges:
   - from: 27
     to: 4
@@ -118,14 +108,10 @@ edges:
     to: 14
   - from: 14
     to: 18
-  - from: 12
-    to: 150000
-  - from: 150000
-    to: 15
-  - from: 15
-    to: 18
   - from: 36
     to: 38
+  - from: 29
+    to: 31
   - from: 31
     to: 33
   - from: 0
@@ -152,11 +138,11 @@ edges:
     to: 26
   - from: 8
     to: 13
-  - from: 13
-    to: 20
-  - from: 29
-    to: 31
-  - from: 18
-    to: 24
+  - from: 12
+    to: 18
   - from: 26
     to: 29
+  - from: 13
+    to: 20
+  - from: 18
+    to: 24

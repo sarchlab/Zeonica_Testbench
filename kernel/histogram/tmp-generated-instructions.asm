@@ -33,7 +33,7 @@ PE(0,1):
   SEXT, [$0] -> [$0] (t=7, inv_iters=1)
 } (idx_per_ii=1)
 {
-  GEP, [arg1], [$0] -> [$0], [$1] (t=8, inv_iters=1)
+  GEP, [arg1], [$0] -> [$0], [$8] (t=8, inv_iters=1)
 } (idx_per_ii=2)
 {
   LOAD, [$0] -> [$0] (t=9, inv_iters=1)
@@ -42,31 +42,29 @@ PE(0,1):
   ADD, [$0], [#1] -> [$0] (t=10, inv_iters=1)
 } (idx_per_ii=4)
 {
-  STORE, [$0], [$1] (t=11, inv_iters=1)
+  STORE, [$0], [$8] (t=11, inv_iters=1)
 } (idx_per_ii=5)
 
 PE(1,1):
 {
-  ADD, [SOUTH, RED], [#1] -> [$0], [$1] (t=2, inv_iters=0)
+  ADD, [SOUTH, RED], [#1] -> [$0], [$8] (t=2, inv_iters=0)
 } (idx_per_ii=2)
 {
-  ICMP_EQ, [$0], [#20] -> [$0], [NORTH, RED], [$2] (t=3, inv_iters=0)
+  ICMP_EQ, [$0], [#20] -> [$0], [NORTH, RED] (t=3, inv_iters=0)
 } (idx_per_ii=3)
 {
   NOT, [$0] -> [$0] (t=4, inv_iters=0)
-  DATA_MOV, [$2] -> [NORTH, RED] (t=4, inv_iters=0)
 } (idx_per_ii=4)
 {
-  GRANT_PREDICATE, [$1], [$0] -> [SOUTH, RED] (t=5, inv_iters=0)
+  GRANT_PREDICATE, [$8], [$0] -> [SOUTH, RED] (t=5, inv_iters=0)
 } (idx_per_ii=5)
 
 PE(1,2):
 {
   DATA_MOV, [SOUTH, RED] -> [$0] (t=4, inv_iters=0)
-  GRANT_PREDICATE, [$0], [$1] -> [$1] (t=10, inv_iters=1)
+  GRANT_PREDICATE, [$0], [$0] -> [$8] (t=10, inv_iters=1)
 } (idx_per_ii=4)
 {
-  DATA_MOV, [SOUTH, RED] -> [$1] (t=5, inv_iters=0)
-  RETURN_VOID, [$1] (t=11, inv_iters=1)
+  RETURN_VOID, [$8] (t=11, inv_iters=1)
 } (idx_per_ii=5)
 
