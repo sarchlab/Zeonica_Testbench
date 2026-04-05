@@ -1,0 +1,552 @@
+nodes:
+  - id: 0
+    opcode: "CONSTANT"
+    tile_x: 2
+    tile_y: 1
+    time_step: 8
+  - id: 1
+    opcode: "CONSTANT"
+    tile_x: 3
+    tile_y: 0
+    time_step: 8
+  - id: 2
+    opcode: "CONSTANT"
+    tile_x: 3
+    tile_y: 1
+    time_step: 8
+  - id: 3
+    opcode: "GRANT_ONCE"
+    tile_x: 0
+    tile_y: 0
+    time_step: 0
+  - id: 18
+    opcode: "MEMSET"
+    tile_x: 3
+    tile_y: 1
+    time_step: 9
+  - id: 19
+    opcode: "PHI_START"
+    tile_x: 0
+    tile_y: 0
+    time_step: 1
+  - id: 20
+    opcode: "PHI_START"
+    tile_x: 0
+    tile_y: 1
+    time_step: 1
+  - id: 26
+    opcode: "DATA_MOV"
+    tile_x: 0
+    tile_y: 2
+    time_step: 4
+  - id: 27
+    opcode: "PHI_START"
+    tile_x: 0
+    tile_y: 1
+    time_step: 2
+  - id: 28
+    opcode: "PHI_START"
+    tile_x: 0
+    tile_y: 0
+    time_step: 7
+  - id: 29
+    opcode: "PHI_START"
+    tile_x: 0
+    tile_y: 1
+    time_step: 4
+  - id: 30
+    opcode: "SHL"
+    tile_x: 1
+    tile_y: 1
+    time_step: 2
+  - id: 31
+    opcode: "GEP"
+    tile_x: 0
+    tile_y: 2
+    time_step: 4
+  - id: 32
+    opcode: "GEP"
+    tile_x: 0
+    tile_y: 2
+    time_step: 5
+  - id: 35
+    opcode: "DATA_MOV"
+    tile_x: 0
+    tile_y: 0
+    time_step: 5
+  - id: 36
+    opcode: "DATA_MOV"
+    tile_x: 0
+    tile_y: 2
+    time_step: 5
+  - id: 38
+    opcode: "DATA_MOV"
+    tile_x: 1
+    tile_y: 0
+    time_step: 8
+  - id: 40
+    opcode: "DATA_MOV"
+    tile_x: 1
+    tile_y: 1
+    time_step: 9
+  - id: 45
+    opcode: "ADD"
+    tile_x: 0
+    tile_y: 1
+    time_step: 3
+  - id: 46
+    opcode: "GEP"
+    tile_x: 0
+    tile_y: 0
+    time_step: 5
+  - id: 47
+    opcode: "GEP"
+    tile_x: 0
+    tile_y: 0
+    time_step: 6
+  - id: 48
+    opcode: "GEP"
+    tile_x: 1
+    tile_y: 1
+    time_step: 3
+  - id: 49
+    opcode: "PHI_START"
+    tile_x: 1
+    tile_y: 2
+    time_step: 5
+  - id: 50
+    opcode: "PHI_START"
+    tile_x: 1
+    tile_y: 2
+    time_step: 6
+  - id: 51
+    opcode: "STORE"
+    tile_x: 0
+    tile_y: 2
+    time_step: 9
+  - id: 55
+    opcode: "DATA_MOV"
+    tile_x: 1
+    tile_y: 0
+    time_step: 10
+  - id: 61
+    opcode: "DATA_MOV"
+    tile_x: 0
+    tile_y: 3
+    time_step: 8
+  - id: 63
+    opcode: "ICMP_EQ"
+    tile_x: 1
+    tile_y: 1
+    time_step: 4
+  - id: 64
+    opcode: "LOAD"
+    tile_x: 1
+    tile_y: 0
+    time_step: 6
+  - id: 65
+    opcode: "LOAD"
+    tile_x: 1
+    tile_y: 0
+    time_step: 7
+  - id: 66
+    opcode: "PHI_START"
+    tile_x: 1
+    tile_y: 2
+    time_step: 4
+  - id: 67
+    opcode: "LOAD"
+    tile_x: 0
+    tile_y: 1
+    time_step: 7
+  - id: 68
+    opcode: "LOAD"
+    tile_x: 0
+    tile_y: 3
+    time_step: 8
+  - id: 69
+    opcode: "DATA_MOV"
+    tile_x: 1
+    tile_y: 0
+    time_step: 7
+  - id: 75
+    opcode: "DATA_MOV"
+    tile_x: 0
+    tile_y: 2
+    time_step: 5
+  - id: 78
+    opcode: "GRANT_PREDICATE"
+    tile_x: 1
+    tile_y: 0
+    time_step: 8
+  - id: 79
+    opcode: "GRANT_PREDICATE"
+    tile_x: 0
+    tile_y: 1
+    time_step: 5
+  - id: 80
+    opcode: "NOT"
+    tile_x: 1
+    tile_y: 1
+    time_step: 5
+  - id: 81
+    opcode: "GEP"
+    tile_x: 0
+    tile_y: 2
+    time_step: 6
+  - id: 84
+    opcode: "DATA_MOV"
+    tile_x: 1
+    tile_y: 0
+    time_step: 8
+  - id: 88
+    opcode: "DATA_MOV"
+    tile_x: 1
+    tile_y: 2
+    time_step: 10
+  - id: 91
+    opcode: "ADD"
+    tile_x: 1
+    tile_y: 1
+    time_step: 6
+  - id: 92
+    opcode: "GRANT_PREDICATE"
+    tile_x: 1
+    tile_y: 0
+    time_step: 9
+  - id: 93
+    opcode: "GRANT_PREDICATE"
+    tile_x: 1
+    tile_y: 1
+    time_step: 10
+  - id: 94
+    opcode: "GRANT_PREDICATE"
+    tile_x: 1
+    tile_y: 2
+    time_step: 9
+  - id: 95
+    opcode: "GRANT_PREDICATE"
+    tile_x: 1
+    tile_y: 2
+    time_step: 10
+  - id: 96
+    opcode: "GRANT_PREDICATE"
+    tile_x: 1
+    tile_y: 2
+    time_step: 11
+  - id: 97
+    opcode: "GRANT_PREDICATE"
+    tile_x: 0
+    tile_y: 1
+    time_step: 6
+  - id: 98
+    opcode: "LOAD"
+    tile_x: 0
+    tile_y: 2
+    time_step: 7
+  - id: 99
+    opcode: "DATA_MOV"
+    tile_x: 0
+    tile_y: 2
+    time_step: 8
+  - id: 101
+    opcode: "CTRL_MOV"
+    tile_x: 0
+    tile_y: 0
+    time_step: 16
+  - id: 102
+    opcode: "CTRL_MOV"
+    tile_x: 0
+    tile_y: 1
+    time_step: 13
+  - id: 109
+    opcode: "ICMP_EQ"
+    tile_x: 1
+    tile_y: 1
+    time_step: 7
+  - id: 110
+    opcode: "MUL"
+    tile_x: 1
+    tile_y: 2
+    time_step: 8
+  - id: 111
+    opcode: "MUL"
+    tile_x: 0
+    tile_y: 2
+    time_step: 8
+  - id: 117
+    opcode: "GRANT_PREDICATE"
+    tile_x: 1
+    tile_y: 1
+    time_step: 9
+  - id: 118
+    opcode: "NOT"
+    tile_x: 1
+    tile_y: 1
+    time_step: 8
+  - id: 119
+    opcode: "ADD"
+    tile_x: 1
+    tile_y: 3
+    time_step: 9
+  - id: 120
+    opcode: "ADD"
+    tile_x: 0
+    tile_y: 1
+    time_step: 9
+  - id: 122
+    opcode: "DATA_MOV"
+    tile_x: 1
+    tile_y: 0
+    time_step: 9
+  - id: 126
+    opcode: "RETURN_VOID"
+    tile_x: 2
+    tile_y: 1
+    time_step: 10
+  - id: 127
+    opcode: "GRANT_PREDICATE"
+    tile_x: 1
+    tile_y: 0
+    time_step: 10
+  - id: 128
+    opcode: "GRANT_PREDICATE"
+    tile_x: 0
+    tile_y: 2
+    time_step: 10
+  - id: 129
+    opcode: "STORE"
+    tile_x: 0
+    tile_y: 3
+    time_step: 10
+  - id: 130
+    opcode: "STORE"
+    tile_x: 1
+    tile_y: 0
+    time_step: 11
+  - id: 590000
+    opcode: "DATA_MOV"
+    tile_x: 0
+    tile_y: 2
+    time_step: 6
+  - id: 620000
+    opcode: "DATA_MOV"
+    tile_x: 0
+    tile_y: 2
+    time_step: 7
+  - id: 720000
+    opcode: "DATA_MOV"
+    tile_x: 1
+    tile_y: 1
+    time_step: 7
+  - id: 730000
+    opcode: "DATA_MOV"
+    tile_x: 0
+    tile_y: 0
+    time_step: 8
+  - id: 990000
+    opcode: "DATA_MOV"
+    tile_x: 1
+    tile_y: 2
+    time_step: 7
+  - id: 1230000
+    opcode: "DATA_MOV"
+    tile_x: 0
+    tile_y: 1
+    time_step: 9
+  - id: 1250000
+    opcode: "DATA_MOV"
+    tile_x: 1
+    tile_y: 1
+    time_step: 10
+edges:
+  - from: 20
+    to: 26
+  - from: 26
+    to: 32
+  - from: 101
+    to: 28
+  - from: 102
+    to: 29
+  - from: 66
+    to: 75
+  - from: 27
+    to: 36
+  - from: 75
+    to: 81
+  - from: 36
+    to: 81
+  - from: 27
+    to: 35
+  - from: 35
+    to: 47
+  - from: 47
+    to: 55
+  - from: 55
+    to: 130
+  - from: 80
+    to: 88
+  - from: 88
+    to: 96
+  - from: 29
+    to: 40
+  - from: 40
+    to: 93
+  - from: 93
+    to: 102
+  - from: 28
+    to: 38
+  - from: 80
+    to: 84
+  - from: 38
+    to: 92
+  - from: 84
+    to: 92
+  - from: 92
+    to: 101
+  - from: 63
+    to: 69
+  - from: 69
+    to: 78
+  - from: 118
+    to: 122
+  - from: 122
+    to: 127
+  - from: 49
+    to: 590000
+  - from: 65
+    to: 730000
+  - from: 120
+    to: 1250000
+  - from: 64
+    to: 720000
+  - from: 50
+    to: 620000
+  - from: 61
+    to: 129
+  - from: 91
+    to: 990000
+  - from: 990000
+    to: 99
+  - from: 99
+    to: 128
+  - from: 118
+    to: 1230000
+  - from: 50
+    to: 61
+  - from: 50
+    to: 94
+  - from: 590000
+    to: 67
+  - from: 49
+    to: 95
+  - from: 48
+    to: 66
+  - from: 111
+    to: 120
+  - from: 47
+    to: 65
+  - from: 110
+    to: 119
+  - from: 63
+    to: 79
+  - from: 30
+    to: 48
+  - from: 91
+    to: 109
+  - from: 29
+    to: 79
+  - from: 63
+    to: 80
+  - from: 31
+    to: 49
+  - from: 0
+    to: 18
+  - from: 720000
+    to: 110
+  - from: 127
+    to: 19
+  - from: 32
+    to: 50
+  - from: 1
+    to: 18
+  - from: 730000
+    to: 120
+  - from: 128
+    to: 20
+  - from: 32
+    to: 51
+  - from: 94
+    to: 50
+  - from: 2
+    to: 18
+  - from: 66
+    to: 96
+  - from: 3
+    to: 19
+  - from: 3
+    to: 20
+  - from: 67
+    to: 111
+  - from: 19
+    to: 27
+  - from: 27
+    to: 46
+  - from: 19
+    to: 28
+  - from: 45
+    to: 97
+  - from: 20
+    to: 29
+  - from: 78
+    to: 127
+  - from: 45
+    to: 63
+  - from: 109
+    to: 117
+  - from: 20
+    to: 30
+  - from: 79
+    to: 91
+  - from: 28
+    to: 78
+  - from: 46
+    to: 64
+  - from: 20
+    to: 31
+  - from: 620000
+    to: 68
+  - from: 117
+    to: 126
+  - from: 27
+    to: 45
+  - from: 68
+    to: 119
+  - from: 80
+    to: 93
+  - from: 80
+    to: 94
+  - from: 80
+    to: 95
+  - from: 80
+    to: 97
+  - from: 81
+    to: 98
+  - from: 95
+    to: 49
+  - from: 96
+    to: 66
+  - from: 97
+    to: 27
+  - from: 98
+    to: 110
+  - from: 98
+    to: 111
+  - from: 109
+    to: 118
+  - from: 1230000
+    to: 128
+  - from: 119
+    to: 129
+  - from: 1250000
+    to: 130
