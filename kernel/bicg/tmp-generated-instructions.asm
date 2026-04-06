@@ -51,10 +51,10 @@ PE(1,0):
   DATA_MOV, [NORTH, RED] -> [$0] (t=9, inv_iters=0)
 } (idx_per_ii=9)
 
-PE(3,0):
+PE(2,0):
 {
-  CONSTANT, [#0] -> [NORTH, RED] (t=8, inv_iters=0)
-} (idx_per_ii=8)
+  STORE, [NORTH, RED], [arg3] (t=9, inv_iters=0)
+} (idx_per_ii=9)
 
 PE(0,1):
 {
@@ -121,16 +121,8 @@ PE(2,1):
   RETURN_VOID, [WEST, RED] (t=10, inv_iters=1)
 } (idx_per_ii=0)
 {
-  CONSTANT, [arg3] -> [EAST, RED] (t=8, inv_iters=0)
+  CONSTANT, [#0] -> [SOUTH, RED] (t=8, inv_iters=0)
 } (idx_per_ii=8)
-
-PE(3,1):
-{
-  CONSTANT, [#32] -> [$0] (t=8, inv_iters=0)
-} (idx_per_ii=8)
-{
-  MEMSET, [WEST, RED], [SOUTH, RED], [$0] (t=9, inv_iters=0)
-} (idx_per_ii=9)
 
 PE(0,2):
 {
